@@ -270,14 +270,14 @@ UID,Name,Position,Age,Height,Min WD,Wage,Personality,Expires,Mins,Club,Division,
 29188482,Kevin Berkoe,D/WB/M (L),23,"5'11""",0,325,,30/11/2027,"1,168",Longford,Irish First Division,2,50,86.0,63.0,85.0,13.18,14.26,5.78,85.0,86.0,1.16,0.04,1.16,0.1,0.23,0%,5.78,0.04
 29072743,Zak Mills,D/WB (R),32,"6'0""",0,500,,30/6/2027,"2,009",South Shields,Vanarama National League,2,50,86.0,71.0,83.0,13.53,11.33,4.66,83.0,86.0,0.81,0.049999999999999996,0.81,0.1,0.58,8%,4.66,0.049999999999999996
 29219118,Isaac Whitehall,"DM, M (C)",23,"6'0""",0,425,,30/6/2027,952,Scarborough Athletic,Vanarama National League,2,50,91.0,38.0,65.0,7.47,11.44,3.59,65.0,91.0,0.76,0.08,0.76,0.11,0.85,0%,3.59,0.08
-2000144672,Pharrell Williams,ST (C),20,"5'9""",0,"1,800",,30/6/2027,"2,813",Crawley,Sky Bet League Two,2,50,86.0,18.0,83.0,22.49,1.50,0.51,83.0,86.0,0.93,0.0,0.93,0.06,2.14,42%,0.51,0.0
+2000144672,Pharrell Williams,ST (C),20,"5'9""",0,"1,800",,30/6/2027,"2,813",Crawley,Sky Bet League Two,2,50,86.0,18.0,83.0,22.49,1.5,0.51,83.0,86.0,0.93,0.0,0.93,0.06,2.14,42%,0.51,0.0
 2000111360,Kian Le Fondre,AM (L),20,"5'7""",0,250,,30/11/2026,"1,081",Longford,Irish First Division,2,50,86.0,20.0,71.0,12.16,5.66,2.33,71.0,86.0,2.33,0.0,2.33,0.15,0.67,25%,2.33,0.0
 2000131016,Ellis Stanton,M (C),20,"5'9""",0,475,,30/6/2026,"1,429",Spennymoor,Vanarama National League North,2,44,87.0,48.0,84.0,7.37,7.24,3.72,84.0,87.0,0.77,0.0,0.77,0.15,1.89,27%,3.72,0.0
 29217667,Will McGowan,"DM, M/AM (C)",22,"5'7""",0,500,Spirited,30/6/2026,"3,918",Blyth,Vanarama National League North,2,69,90.0,28.0,83.0,16.89,6.96,7.28,83.0,90.0,8.48,0.0,8.48,0.18,1.15,32%,7.28,0.0
 2000027046,Mathew Mallon,D (R),21,"6'3""",0,625,,30/6/2026,"3,910",Chester,Vanarama National League North,2,50,79.0,87.0,86.0,15.84,18.55,4.1,86.0,79.0,1.47,0.03,1.47,0.18,1.50,28%,4.1,0.03
 28126250,Kwaku Oduroh,WB (R),22,"6'0""",0,700,,30/6/2026,"1,067",Sutton,Sky Bet League Two,2,50,87.0,63.0,90.0,17.21,9.78,4.13,90.0,87.0,1.35,0.02,1.35,0.06,0.25,33%,4.13,0.02
 29163844,Nathan Tshikuna,M/AM (C),26,"5'10""",0,575,Balanced,30/6/2026,"2,390",Barnet,Vanarama National League,2,50,86.0,28.0,79.0,20.64,8.17,1.88,79.0,86.0,1.77,0.0,1.77,0.2,1.81,48%,1.88,0.0
-29188048,George Cantrill,"DM, M (C)",25,"5'10""",0,300,Balanced,30/6/2026,"4,030",Alfreton,Vanarama National League North,2,50,90.0,33.0,75.0,8.31,9.60,3.84,75.0,90.0,1.14,0.04,1.14,0.12,1.14,35%,3.84,0.04
+29188048,George Cantrill,"DM, M (C)",25,"5'10""",0,300,Balanced,30/6/2026,"4,030",Alfreton,Vanarama National League North,2,50,90.0,33.0,75.0,8.31,9.6,3.84,75.0,90.0,1.14,0.04,1.14,0.12,1.14,35%,3.84,0.04
 2002081385,Graeme Dall,M/AM (R),18,"5'10""",0,400,Fickle,30/6/2026,"3,179",Farsley,Vanarama National League North,2,47,82.0,34.0,80.0,12.5,8.24,3.17,80.0,82.0,1.71,0.0,1.71,0.11,1.78,35%,3.17,0.0
 2000202092,Charlie Goldsmith,"M (C), AM (RC)",19,"6'0""",0,275,Fairly Determined,30/6/2026,"2,146",Spennymoor,Vanarama National League North,2,44,81.0,53.0,74.0,9.4,5.62,2.01,74.0,81.0,0.83,0.0,0.83,0.07,1.30,42%,2.01,0.0
 2000117449,Harry Scarborough,"AM (R), ST (C)",22,"6'3""",0,325,Balanced,30/6/2026,"1,165",Boston Utd,Vanarama National League North,2,50,85.0,67.0,75.0,10.12,4.94,1.16,75.0,85.0,1.78,0.0,1.78,0.11,3.40,52%,1.16,0.0
@@ -286,14 +286,14 @@ UID,Name,Position,Age,Height,Min WD,Wage,Personality,Expires,Mins,Club,Division,
 29219537,Brad Nicholson,"D (LC), WB (L)",26,"6'2""",0,325,Balanced,30/6/2025,"3,576",Boston Utd,Vanarama National League North,2,50,84.0,62.0,78.0,13.69,10.17,4.58,78.0,84.0,1.43,0.0,1.43,0.27,1.13,36%,4.58,0.0
 2000026491,Aaron Korpal,AM (RL),20,"5'9""",0,525,,30/6/2025,"4,240",Buxton,Vanarama National League North,2,51,85.0,37.0,74.0,10.7,7.64,2.19,74.0,85.0,2.55,0.0,2.55,0.22,2.55,41%,2.19,0.0
 29233082,Eno Nto,"AM (RL), ST (C)",22,"5'11""",0,500,,30/6/2025,"1,707",Buxton,Vanarama National League North,2,51,80.0,52.0,94.0,14.09,8.01,1.37,94.0,80.0,2.86,0.0,2.86,0.25,3.22,46%,1.37,0.0
-90091913,Isaac Sinclair,"DM, M/AM (RLC)",23,"5'10""",0,240,Fairly Ambitious,30/6/2025,"3,658",Curzon Ashton,Vanarama National League North,2,44,86.0,33.0,79.0,9.34,7.70,2.71,79.0,86.0,1.42,0.03,1.42,0.22,1.18,25%,2.71,0.03
+90091913,Isaac Sinclair,"DM, M/AM (RLC)",23,"5'10""",0,240,Fairly Ambitious,30/6/2025,"3,658",Curzon Ashton,Vanarama National League North,2,44,86.0,33.0,79.0,9.34,7.7,2.71,79.0,86.0,1.42,0.03,1.42,0.22,1.18,25%,2.71,0.03
 2000183394,Liam Jones,"D (L), AM (LC), ST (C)",19,"5'9""",0,275,Balanced,30/6/2025,"2,778",Peterborough Sports,Vanarama National League North,2,52,86.0,13.0,80.0,7.59,4.96,2.17,80.0,86.0,2.01,0.0,2.01,0.15,2.01,47%,2.17,0.0
-29156806,Liam Waldock,"DM, M/AM (C)",24,"5'10""",0,325,Balanced,30/6/2025,"1,733",Alfreton,Vanarama National League North,2,50,87.0,12.0,59.0,11.22,5.40,1.66,59.0,87.0,1.56,0.0,1.56,0.12,2.29,43%,1.66,0.0
+29156806,Liam Waldock,"DM, M/AM (C)",24,"5'10""",0,325,Balanced,30/6/2025,"1,733",Alfreton,Vanarama National League North,2,50,87.0,12.0,59.0,11.22,5.4,1.66,59.0,87.0,1.56,0.0,1.56,0.12,2.29,43%,1.66,0.0
 29219102,Ken Charles,"AM (RL), ST (C)",24,"6'0""",0,375,Balanced,30/6/2025,"4,252",Banbury,Vanarama National League North,2,50,84.0,38.0,84.0,10.31,4.51,1.04,84.0,84.0,1.5,0.06999999999999995,1.5,0.14,2.77,41%,1.04,0.06999999999999995
-2000141362,Terrell Works,"AM (RLC), ST (C)",20,"6'1""",0,250,Resolute,30/6/2025,"3,070",Oxford City,Vanarama National League North,2,46,87.0,19.0,74.0,6.76,5.10,2.2,74.0,87.0,0.88,0.0,0.88,0.1,1.41,52%,2.2,0.0
+2000141362,Terrell Works,"AM (RLC), ST (C)",20,"6'1""",0,250,Resolute,30/6/2025,"3,070",Oxford City,Vanarama National League North,2,46,87.0,19.0,74.0,6.76,5.1,2.2,74.0,87.0,0.88,0.0,0.88,0.1,1.41,52%,2.2,0.0
 29233758,Billy Fewster,M/AM (RLC),21,"5'10""",0,475,Balanced,30/6/2025,"3,266",Alfreton,Vanarama National League North,2,50,84.0,48.0,85.0,13.81,7.33,2.67,85.0,84.0,3.47,0.0,3.47,0.19,2.18,39%,2.67,0.0
 2000081565,Jack Tolley,WB/AM (RL),21,"5'11""",0,300,Balanced,30/6/2025,"4,021",Gloucester,Vanarama National League North,2,50,86.0,31.0,82.0,12.2,6.49,2.15,82.0,86.0,3.25,0.0,3.25,0.19,1.19,40%,2.15,0.0
-29176532,Keaton Ward,M/AM (C),24,"6'0""",0,400,Balanced,30/6/2025,"4,329",Boston Utd,Vanarama National League North,2,50,85.0,23.0,75.0,9.0,4.70,2.37,75.0,85.0,0.89,0.0,0.89,0.22,1.29,44%,2.37,0.0
+29176532,Keaton Ward,M/AM (C),24,"6'0""",0,400,Balanced,30/6/2025,"4,329",Boston Utd,Vanarama National League North,2,50,85.0,23.0,75.0,9.0,4.7,2.37,75.0,85.0,0.89,0.0,0.89,0.22,1.29,44%,2.37,0.0
 29162659,Mitchell Curry,"AM (RL), ST (C)",25,"5'10""",0,625,Balanced,30/6/2025,"3,833",Darlington,Vanarama National League North,2,48,87.0,22.0,71.0,8.02,5.71,1.46,71.0,87.0,1.36,0.0,1.36,0.18,2.25,49%,1.46,0.0
 28100474,Jack Evans,"DM, M (C)",27,"6'1""",0,0,Fairly Professional,-,"1,723",Farsley,Vanarama National League North,2,47,86.0,52.0,78.0,9.07,9.19,4.81,78.0,86.0,0.96,0.0,0.96,0.13,1.62,39%,4.81,0.0
 29160424,Luke Burgess,"M (L), AM (RLC)",26,"5'9""",0,0,Balanced,-,"4,051",Southport,Vanarama National League North,2,46,83.0,20.0,80.0,10.37,7.13,2.44,80.0,83.0,1.96,0.0,1.96,0.27,1.69,49%,2.44,0.0

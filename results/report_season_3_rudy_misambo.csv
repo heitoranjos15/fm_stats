@@ -231,13 +231,13 @@ UID,Name,Position,Age,Height,Min WD,Wage,Personality,Expires,Mins,Club,Division,
 28127268,Eddie Jackson,D (R),22,"5'9""",0,170,Determined,30/6/2026,"2,381",Connah's Quay,JD Cymru Premier,2,50,82.0,70.0,71.0,11.83,11.49,4.57,70.0,0.0,71.0,4.61,1.36,0.45,11.49,11.83
 2000091553,CJ Clarke,"D (R), DM, M (C)",22,"5'10""",0,500,Balanced,30/6/2026,"2,072",South Shields,Vanarama National League,2,50,88.0,62.0,77.0,11.86,9.03,3.95,62.0,0.0,77.0,1.87,1.91,0.17,9.03,11.86
 2000048045,Ryan Bartley,D (C),21,"5'11""",0,925,,30/6/2026,"1,234",Forest Green,Sky Bet League Two,2,50,82.0,75.0,74.0,8.17,6.42,3.72,75.0,0.0,74.0,5.18,1.02,0.80,6.42,8.17
-29128545,Kyron Farrell,D/WB/M (L),27,"5'11""",0,300,Balanced,30/6/2026,"4,350",Bath City,Vanarama National League South,2,50,85.0,70.0,74.0,13.14,13.10,5.83,70.0,0.0,74.0,4.41,2.40,0.64,13.10,13.14
+29128545,Kyron Farrell,D/WB/M (L),27,"5'11""",0,300,Balanced,30/6/2026,"4,350",Bath City,Vanarama National League South,2,50,85.0,70.0,74.0,13.14,13.1,5.83,70.0,0.0,74.0,4.41,2.40,0.64,13.1,13.14
 2000110565,Dan Myers,D (LC),23,"6'1""",0,240,Balanced,30/6/2026,"2,501",Spennymoor,Vanarama National League North,2,44,85.0,74.0,80.0,9.35,14.14,4.61,74.0,0.0,80.0,6.77,2.38,0.72,14.14,9.35
 2000117449,Harry Scarborough,"AM (R), ST (C)",22,"6'3""",0,325,Balanced,30/6/2026,"1,165",Boston Utd,Vanarama National League North,2,50,85.0,67.0,75.0,10.12,4.94,1.16,67.0,0.0,75.0,7.18,0.93,-,4.94,10.12
 28124744,Cardo Siddik,D (C),22,"6'3""",0,600,Balanced,30/6/2025,"3,587",Darlington,Vanarama National League North,2,48,84.0,85.0,73.0,9.29,14.38,4.89,85.0,0.0,73.0,8.23,1.33,0.63,14.38,9.29
 29219537,Brad Nicholson,"D (LC), WB (L)",26,"6'2""",0,325,Balanced,30/6/2025,"3,576",Boston Utd,Vanarama National League North,2,50,84.0,62.0,78.0,13.69,10.17,4.58,62.0,0.0,78.0,3.35,2.09,0.45,10.17,13.69
 2000130212,Jayden Barber,D/WB (R),19,"6'3""",0,475,Fairly Determined,30/6/2025,"1,912",Worthing,Vanarama National League,2,50,85.0,64.0,80.0,15.96,12.43,5.7,64.0,0.0,80.0,4.10,2.21,0.19,12.43,15.96
-2000207269,Harvey Fletcher,"DM, M (C), AM (R)",18,"5'3""",0,275,Balanced,30/6/2025,"1,657",Hyde,English Northern Premier League Premier Division,2,50,72.0,75.0,74.0,0.33,0.60,0.33,75.0,0.0,74.0,0.33,2.17,-,0.60,0.33
+2000207269,Harvey Fletcher,"DM, M (C), AM (R)",18,"5'3""",0,275,Balanced,30/6/2025,"1,657",Hyde,English Northern Premier League Premier Division,2,50,72.0,75.0,74.0,0.33,0.6,0.33,75.0,0.0,74.0,0.33,2.17,-,0.6,0.33
 2000055713,Michael Stone,M (C),20,"5'9""",0,475,,30/6/2025,"3,150",Mickleover,English Isthmian League North Division,2,50,72.0,63.0,75.0,0.11,0.31,0.2,63.0,0.0,75.0,0.14,1.97,-,0.31,0.11
 29160404,Sam Fielding,"D (RC), DM, M (C)",26,"6'2""",0,275,Balanced,30/6/2025,"2,535",Spennymoor,Vanarama National League North,2,44,88.0,57.0,71.0,7.29,9.73,5.11,57.0,0.0,71.0,2.45,1.85,0.50,9.73,7.29
 2000135239,Edward Gyamfi,"D (R), DM, M (C)",21,"5'10""",0,325,Balanced,30/6/2025,"3,838",Tamworth,Vanarama National League North,2,53,87.0,62.0,73.0,7.06,8.82,3.05,62.0,0.0,73.0,2.16,1.45,0.35,8.82,7.06
@@ -248,6 +248,6 @@ UID,Name,Position,Age,Height,Min WD,Wage,Personality,Expires,Mins,Club,Division,
 29226266,Luca Murphy,D (C),23,"6'4""",0,475,Balanced,30/6/2025,"2,031",Blyth,Vanarama National League North,2,69,90.0,84.0,68.0,13.08,12.94,6.51,84.0,0.0,68.0,7.71,0.58,0.80,12.94,13.08
 2000042595,Jack Leckie,D (C),21,"6'6""",0,0,,-,"2,433",Warrington,Vanarama National League North,2,47,73.0,64.0,74.0,10.64,13.76,3.33,64.0,0.0,74.0,5.59,1.37,0.81,13.76,10.64
 2000052149,Harvey Sutcliffe,D (R),21,"5'9""",0,0,,-,"2,006",Penybont,JD Cymru Premier,2,50,85.0,61.0,91.0,14.18,11.93,5.7,61.0,0.0,91.0,3.77,2.29,0.58,11.93,14.18
-89061032,Jordan Cullinane-Liburd,D (C),29,"6'3""",0,0,,-,"3,501",Tamworth,Vanarama National League North,2,53,81.0,83.0,71.0,15.23,15.50,4.22,83.0,0.0,71.0,8.71,1.05,0.46,15.50,15.23
+89061032,Jordan Cullinane-Liburd,D (C),29,"6'3""",0,0,,-,"3,501",Tamworth,Vanarama National League North,2,53,81.0,83.0,71.0,15.23,15.5,4.22,83.0,0.0,71.0,8.71,1.05,0.46,15.5,15.23
 2000207729,Harvey Warren,D (RC),21,"6'1""",0,0,Balanced,-,"1,134",Leamington,Vanarama National League North,2,52,83.0,71.0,72.0,10.33,14.37,3.17,71.0,0.0,72.0,6.51,1.03,0.32,14.37,10.33
 28048010,Matt Dolan,"D (C), DM",32,"5'9""",0,325,,30/6/2025,"3,273",Scarborough Athletic,Vanarama National League,2,50,86.0,63.0,73.0,3.74,15.73,4.12,63.0,0.0,73.0,4.65,0.99,0.41,15.73,3.74
