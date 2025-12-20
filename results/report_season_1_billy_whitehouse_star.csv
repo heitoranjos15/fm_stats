@@ -1,69 +1,17 @@
-UID,Name,Position,Age,Height,Wage,Personality,Expires,Mins,Club,Division,season,possession,Pas %,Hdr %,Tck R,Poss Lost/90,Ps C/90,Pas %,Pr passes/90,xpG_diff,Sprints/90,Shot/90,Shot %
-28093272,Charlie Cooper,"DM, M (C)",27,"5'9""",750,,30/6/2025,2090,Yeovil,Vanarama National League South,0,57,88.0,49.0,75.0,6.98,47.45,88.0,3.92,0.07,9.43,0.86,20%
-29222576,Yusifu Ceesay,M/AM (L),29,"6'2""",400,,30/6/2024,3658,Hereford,Vanarama National League North,0,46,82.0,49.0,79.0,14.27,23.96,82.0,2.34,0.01,11.05,2.07,43%
-28095475,Jacob Berkeley-Agyepong,"M (LC), AM (L)",27,"6'0""",700,,30/6/2024,2480,Maidstone,Vanarama National League South,0,44,83.0,49%,79%,18.98,28.67,83.0,3.67,0.0,11.58,0.07,0%
-28116915,Bivesh Gurung,"DM, M (C)",22,"6'0""",400,,30/6/2024,1424,Maidstone,Vanarama National League South,0,44,89.0,49.0,76.0,9.29,45.25,89.0,4.3,0.05,9.23,0.76,0%
-29005307,Joe Partington,"D (RC), DM",34,"6'2""",650,,30/6/2025,3288,St. Albans,Vanarama National League South,0,44,87.0,49.0,79.0,7.64,43.44,87.0,4.38,0.08,9.85,0.88,25%
-29191771,Kian Ronan,D/WB (R),23,"5'9""",575,,30/6/2024,1452,King's Lynn,Vanarama National League North,0,46,84.0,49.0,81.0,16.12,33.66,84.0,3.47,0.07,14.07,0.56,22%
-90069813,Lassana Mendes,"M (RC), AM (R)",31,"5'10""",575,,30/6/2024,1697,Hereford,Vanarama National League North,0,46,85.0,49.0,80.0,14.32,32.78,85.0,3.18,0.04,13.31,2.12,48%
-29178502,Daniel Martin,D/WB (L),24,"5'8""",575,,30/6/2024,2203,Torquay,Vanarama National League South,0,54,84.0,48.0,88.0,12.17,36.28,84.0,4.62,0.04,14.26,0.53,23%
-2000117899,Osman Foyo,M/AM (C),19,"6'1""",400,,30/6/2024,2724,Banbury,Vanarama National League North,0,44,87.0,48.0,75.0,7.43,34.86,87.0,2.64,0.04,6.18,1.22,38%
-28029361,Jake Taylor,"DM, M (C)",32,"5'10""","1,700",,30/6/2025,2139,Eastleigh,Vanarama National League,0,50,89.0,48.0,70.0,7.45,45.06,89.0,3.91,0.05,10.39,0.67,25%
-28085969,George Glendon,M (C),29,"5'10""",875,,30/6/2024,4365,Chester,Vanarama National League North,0,56,89.0,47.0,84.0,9.35,45.05,89.0,4.66,0.01,7.79,1.57,30%
-2000144681,Engwau Oduka,"D (C), DM, M (C)",19,"6'2""",350,,30/6/2025,3395,King's Lynn,Vanarama National League North,0,46,87.0,47.0,80.0,6.75,44.32,87.0,3.95,0.04,9.04,0.56,33%
-2000125526,Finley Barbrook,"DM, M (C)",19,"6'0""",350,,30/6/2025,3218,Tonbridge,Vanarama National League South,0,48,87.0,46.0,74.0,5.27,42.96,87.0,3.47,0.01,9.48,0.59,10%
-90091780,Connor Woods,AM (R),26,"5'8""",350,,30/6/2024,3734,Warrington,Vanarama National League North,0,46,84.0,45.0,85.0,14.68,26.37,84.0,3.18,0.05,12.2,1.83,36%
-2000108081,MatÃºÅ¡ HolÃ­Äek,AM (L),19,"6'0""",575,,30/6/2025,3649,South Shields,Vanarama National League North,0,59,84.0,45.0,94.0,12.85,30.98,84.0,2.84,0.01,11.64,2.27,45%
-29185231,Tom Mehew,"DM, M (C)",23,"6'1""",475,,30/5/2025,4049,Chippenham,Vanarama National League South,0,45,88.0,45.0,66.0,8.05,46.34,88.0,3.89,0.03,8.62,0.71,19%
-29173985,Alfie Payne,"DM, M (C)",24,"5'10""",350,,30/6/2025,4046,Braintree,Vanarama National League South,0,50,88.0,44.0,82.0,7.79,46.31,88.0,4.76,0.0,9.21,0.60,33%
-2000125469,Liam Humbles,"DM, M (C)",20,"5'11""",450,,30/6/2025,3340,Maidstone,Vanarama National League South,0,44,88.0,44.0,74.0,7.24,45.3,88.0,4.26,0.04,11.56,0.70,19%
-29233181,Fraser Alexander,"DM, M (C)",21,"5'7""",230,,30/6/2024,3943,Bishop's Stortford,Vanarama National League North,0,45,88.0,44.0,81.0,6.55,41.34,88.0,2.65,0.09,10.16,1.37,32%
-2000274729,Henry Young,"DM, M (C)",19,"6'0""",0,,-,2058,Dover,Vanarama National League South,0,47,87.0,43.0,88.0,7.51,46.18,87.0,3.94,0.02,8.75,0.74,24%
-90091351,Nathan Newall,D/WB (L),22,"6'0""",0,,-,3796,Alfreton,Vanarama National League North,0,44,80.0,42.0,79.0,10.79,32.77,80.0,4.41,0.03,13.02,0.38,19%
-2000066158,Antony Papadopoulos,"DM, M (C)",21,"5'11""",0,,-,1730,Welling,Vanarama National League South,0,46,83.0,42.0,70.0,12.49,37.72,83.0,4.06,0.14,6.97,1.04,30%
-2000160252,George Wilkinson,DM,20,"5'9""",120,,30/6/2024,3385,Dover,Vanarama National League South,0,47,88.0,41.0,82.0,6.62,46.53,88.0,3.43,0.02,9.97,0.32,33%
-29210194,George Hunt,"DM, M (C)",22,"6'0""",400,,30/6/2026,3262,Hampton & Richmond,Vanarama National League South,0,53,89.0,41.0,82.0,7.43,45.08,89.0,3.37,0.04,9.1,0.77,25%
-29194204,Oliver Pendlebury,M (C),22,"5'9""",400,,30/6/2024,4467,Farnborough,Vanarama National League South,0,53,88.0,40.0,83.0,13.07,40.58,88.0,3.77,0.01,9.41,0.93,35%
-29107438,Jack Bridge,AM (L),28,"5'10""","1,700",,30/6/2025,3644,Southend,Vanarama National League,0,50,87.0,39.0,83.0,14.25,36.03,87.0,4.08,0.0,13.34,0.05,50%
-29233888,Matty McDonald,M/AM (C),21,"6'4""",450,,30/6/2025,3562,Warrington,Vanarama National League North,0,46,86.0,39.0,82.0,8.94,32.92,86.0,3.03,0.06,11.45,1.59,35%
-2000122117,Ayyuba Jambang,D (R),19,"5'9""",925,,30/6/2025,1980,Aveley,Vanarama National League South,0,46,84.0,39.0,89.0,15.68,39.18,84.0,5.59,0.12,16.18,1.55,21%
-29223285,Adam Porter,"DM, M (C)",22,"5'8""",350,,30/6/2025,4026,Truro,Vanarama National League South,0,51,88.0,38.0,79.0,7.83,43.88,88.0,4.16,0.05,11.09,0.56,24%
-2000118114,Sahid Nallo,"DM, M (C)",19,"5'10""",65,,30/6/2024,1035,Banbury,Vanarama National League North,0,44,89.0,38.0,79.0,6.37,42.87,89.0,2.96,0.0,5.83,0.70,25%
-29108194,Jack Stobbs,M/AM (R),27,"5'10""",675,,30/6/2025,1041,Torquay,Vanarama National League South,0,54,84.0,38.0,69.0,13.57,27.32,84.0,3.37,0.13,12.1,0.86,20%
-28121312,Sam Packham,D (R),22,"5'10""",600,,30/6/2024,4090,Worthing,Vanarama National League South,0,53,84.0,37.0,84.0,11.7,40.51,84.0,5.48,0.0,13.03,1.30,31%
-29217232,Kian Scales,M (C),22,"5'11""","1,200",,30/6/2025,3092,Scunthorpe,Vanarama National League North,0,59,89.0,37.0,78.0,9.73,44.94,89.0,3.03,0.07,10.25,1.66,35%
-2000113748,Brad McGregor,"WB (L), DM, M (C)",19,"5'8""",375,,30/6/2025,3924,Hereford,Vanarama National League North,0,46,86.0,37.0,68.0,8.37,41.4,86.0,4.01,0.0,9.04,1.15,22%
-2000115007,Murtadha Al-Jahadhmy,"M (RL), AM (RLC)",20,"6'0""",100,,30/6/2024,3654,Banbury,Vanarama National League North,0,44,85.0,36.0,89.0,10.97,25.69,85.0,2.76,0.01,6.35,1.43,33%
-29113880,Alex Purver,"DM, M (C)",28,"5'10""",675,,30/6/2026,3673,Scarborough Athletic,Vanarama National League North,0,50,87.0,35.0,74.0,7.89,47.17,87.0,5.61,0.05,11.93,1.20,33%
-2000147435,Harry Titchmarsh,"DM, M (C)",19,"5'10""",400,,30/6/2025,3334,Havant & W,Vanarama National League South,0,54,88.0,34.0,71.0,7.01,44.49,88.0,3.59,0.0,9.8,0.57,19%
-94044706,Ryan Hill,AM (RC),26,"5'10""",875,,30/6/2025,1667,Dag & Red,Vanarama National League,0,50,86.0,34.0,85.0,15.28,29.05,86.0,2.92,0.0,12.47,1.40,35%
-29159021,Luke Russe,"DM, M (C)",24,"5'9""",575,,30/6/2026,2474,Bath City,Vanarama National League South,0,47,90.0,34.0,72.0,8.75,44.64,90.0,3.49,0.0,9.35,0.76,19%
-2000060514,Jason Adigun,M/AM (C),20,"6'6""",400,,30/6/2025,3331,Hemel Hempstead,Vanarama National League South,0,50,86.0,34.0,71.0,14.48,38.42,86.0,3.67,0.08,7.86,1.43,34%
-28049717,Lawson D'Ath,M (C),31,"5'9""",325,,30/6/2025,3358,Banbury,Vanarama National League North,0,44,85.0,32.0,76.0,10.05,38.35,85.0,4.1,0.04,7.1,1.39,33%
-2000106594,Jerry Lawrence,"DM, M (C)",19,"5'7""",475,,30/6/2026,2647,Weymouth,Vanarama National League South,0,51,87.0,32.0,69.0,8.18,44.4,87.0,3.88,0.08,8.98,0.65,21%
-2000225291,Ralfi Hand,"DM, M (C)",19,"6'0""",525,,30/6/2025,2079,Eastbourne Borough,Vanarama National League South,0,52,87.0,31.0,68.0,8.21,45.02,87.0,4.03,0.06,9.57,0.82,16%
-28099485,Dan Pybus,"DM, M (C)",26,"5'10""",700,,30/6/2026,4256,Dorking,Vanarama National League,0,50,89.0,31.0,72.0,8.04,46.33,89.0,3.79,0.0,10.21,0.70,27%
-29153889,Connor Kirby,M (C),25,"5'7""",525,,30/6/2025,2387,Buxton,Vanarama National League North,0,46,86.0,30.0,78.0,8.14,39.59,86.0,4.0,0.03,6.26,1.06,25%
-29217479,Lewis Simper,M (C),22,"5'9""","1,200",,30/6/2025,2220,Tamworth,Vanarama National League North,0,48,87.0,30.0,73.0,7.1,35.92,87.0,2.55,0.07,10.7,1.86,43%
-95031504,Sam Corne,M (C),27,"5'7""",575,,30/6/2024,1602,Maidstone,Vanarama National League South,0,44,88.0,30.0,76.0,7.38,42.13,88.0,3.88,0.01,8.48,0.73,15%
-29139358,Darren Foxley,AM (RL),27,"5'10""",350,,30/6/2024,3851,Bishop's Stortford,Vanarama National League North,0,45,83.0,29.0,87.0,14.82,25.4,83.0,2.34,0.07,12.18,1.40,37%
-28094827,Josh Smile,"DM, M (C)",27,"5'6""",300,,30/6/2024,3318,Gloucester,Vanarama National League North,0,48,89.0,27.0,79.0,7.8,42.69,89.0,3.2,0.02,9.52,1.08,23%
-29175036,Dom Tear,AM (RL),24,"5'11""",300,,30/6/2024,1439,Scarborough Athletic,Vanarama National League North,0,50,86.0,26.0,79.0,13.82,30.65,86.0,2.5,0.05,17.51,2.19,34%
-2000137628,Ash McCarthy,AM (L),19,"5'9""",400,,30/6/2025,2134,Eastbourne Borough,Vanarama National League South,0,52,84.0,26%,91%,18.05,29.69,84.0,4.01,0.03,10.12,0.72,18%
-29188048,George Cantrill,M (C),24,"5'10""",300,,30/6/2026,4246,Alfreton,Vanarama National League North,0,44,88.0,24.0,78.0,6.98,32.73,88.0,2.37,0.02,13.31,1.06,40%
-29159367,Kyle Finn,"M (R), AM (RLC)",25,"5'10""",230,,30/6/2024,4425,Tamworth,Vanarama National League North,0,48,83.0,24.0,90.0,16.07,29.06,83.0,2.97,0.03,12.2,1.55,49%
-74048740,Iwan Murray,M/AM (C),23,"5'5""",500,,30/6/2026,3779,Chester,Vanarama National League North,0,56,85.0,23.0,75.0,9.56,26.65,85.0,2.79,0.02,6.72,1.45,33%
-29233762,Sam Leverett,M (C),21,"5'9""",170,,30/6/2025,1144,Farsley,Vanarama National League North,0,47,86.0,20.0,88.0,8.75,42.17,86.0,4.56,0.06,10.94,1.10,14%
-28095353,Dominic McHale,AM (RLC),27,"5'11""",700,,30/6/2024,4209,Scarborough Athletic,Vanarama National League North,0,50,87.0,20.0,77.0,8.55,27.73,87.0,2.35,0.0,8.28,1.56,40%
-2000103932,Josh Castiglione,AM (R),27,"5'6""",425,,30/6/2025,2860,Chelmsford,Vanarama National League South,0,52,85.0,19.0,66.0,14.7,27.6,85.0,2.74,0.01,11.27,1.01,28%
-28127127,Oli Ewing,"DM, M (C)",21,"5'7""","1,500",,30/6/2024,2912,Chester,Vanarama National League North,0,56,89.0,19.0,82.0,6.32,40.33,89.0,4.54,0.01,8.5,0.62,45%
-29236669,Cameron Wilson,AM (R),21,"5'11""",875,,30/6/2025,2591,Scunthorpe,Vanarama National League North,0,59,88.0,15.0,81.0,13.93,33.0,88.0,2.92,0.07,11.01,1.70,35%
-29068440,Michael Clunan,M (C),30,"5'10""",875,,30/6/2024,1167,Scunthorpe,Vanarama National League North,0,59,87.0,14.0,83.0,8.84,35.71,87.0,2.62,0.0,8.71,1.31,47%
-90057559,Alex Newby,AM (RLC),28,"5'8""","1,700",,30/6/2025,1323,Altrincham,Vanarama National League,0,50,85.0,12.0,90.0,15.24,29.12,85.0,2.86,0.06,11.9,0.88,54%
-28128052,Nathan Carlyon,DM,22,"5'10""",725,,30/6/2028,"2,492",AFC Fylde,Vanarama National League,1,50,88.0,37.0,79.0,4.59,44.86,88.0,4.95,0.08,8.81,0.79,14%
-29219118,Isaac Whitehall,"DM, M (C)",23,"6'0""",425,,30/6/2027,952,Scarborough Athletic,Vanarama National League,1,50,91.0,38.0,65.0,7.47,44.81,91.0,3.59,0.08,10.02,0.85,0%
-28127070,Hayden Lindley,"DM, M (C)",22,"6'0""","1,100",Fairly Determined,30/6/2026,"2,571",Darlington,Vanarama National League North,1,49,88.0,36.0,81.0,7.34,39.52,88.0,4.2,0.04,12.67,0.70,10%
-29229012,Oliver Green,"DM, M (C)",22,"6'3""",250,,30/6/2026,"2,866",Haverfordwest,JD Cymru Premier,1,50,89.0,37.0,68.0,5.75,45.94,89.0,4.24,0.04,9.64,0.53,24%
-29229004,Jake Leake,"D (LC), WB (L)",22,"6'2""",300,Balanced,30/6/2026,"1,260",Curzon Ashton,Vanarama National League North,1,46,83.0,41.0,73.0,10.31,28.00,83.0,3.93,0.09,12.43,1.00,57%
-90091913,Isaac Sinclair,"DM, M/AM (RLC)",23,"5'10""",240,Fairly Ambitious,30/6/2025,"3,658",Curzon Ashton,Vanarama National League North,1,46,86.0,33.0,79.0,9.69,33.53,86.0,2.71,0.03,10.01,1.18,25%
-28128171,Frankie Maguire,"DM, M (C)",21,"5'9""",0,,-,"1,519",Bromley,Vanarama National League,1,50,85.0,20.0,86.0,14.69,41.77,85.0,4.56,0.06,8.53,0.53,22%
+UID,Name,Position,Age,Height,Min WD,Wage,Personality,Expires,Mins,Club,Division,season,possession,Pas %,Hdr %,Tck R,Poss Lost/90,Poss Won/90,Gls/90,NP-xG/90,xpG_diff,Sprints/90,Shot/90,Shot %
+215477,Alex Babos,"DM, M/AM (C)",25,"5'9""",0,475,,30/6/2024,3341,Hereford,Vanarama National League North,1,50,84.0,21.0,72.0,10.8,6.33,0.27,0.18,0.0,7.95,1.10,54%
+28037033,Adam Blakeman,D/WB (L),32,"5'11""",0,525,,30/6/2024,1557,Chorley,Vanarama National League North,1,59,84.0,71.0,82.0,16.07,11.62,0.35,0.07,0.040000000000000036,17.86,1.68,34%
+29107492,Declan Weeks,"DM, M (C)",28,"5'9""",0,400,,30/6/2026,4424,Chester,Vanarama National League North,1,47,89.0,63.0,74.0,10.86,7.97,0.2,0.06,0.0,8.81,1.24,38%
+29222576,Yusifu Ceesay,M/AM (L),29,"6'2""",0,400,,30/6/2024,3658,Hereford,Vanarama National League North,1,50,82.0,49.0,79.0,14.27,8.37,0.22,0.23,0.010000000000000009,11.05,2.07,43%
+90069813,Lassana Mendes,"M (RC), AM (R)",31,"5'10""",0,575,,30/6/2024,1697,Hereford,Vanarama National League North,1,50,85.0,49.0,80.0,14.32,9.18,0.21,0.25,0.04000000000000001,13.31,2.12,48%
+2000108081,MatÃºÅ¡ HolÃ­Äek,AM (L),19,"6'0""",0,575,,30/6/2025,3649,South Shields,Vanarama National League North,1,50,84.0,45.0,94.0,12.85,6.24,0.35,0.24,0.010000000000000009,11.64,2.27,45%
+2000130150,Chibike Okechukwu,ST (C),19,"5'11""",0,525,,30/6/2024,1716,Taunton,Vanarama National League South,1,50,87.0,29.0,75.0,23.55,1.42,0.21,0.22,0.010000000000000009,5.14,1.94,43%
+90047169,Matt Warburton,"AM (C), ST (C)",32,"5'9""",0,850,,30/6/2025,1544,Solihull Moors,Vanarama National League,1,50,80.0,25.0,72.0,22.79,6.7,0.29,0.25,0.06,7.58,2.45,36%
+29188715,Matt Rush,ST (C),23,"5'10""",0,575,,30/6/2024,1785,Maidstone,Vanarama National League South,1,50,85.0,24.0,85.0,19.51,2.72,0.2,0.23,0.03,7.31,2.22,36%
+29045450,Matt McClure,ST (C),32,"5'10""",0,475,,30/6/2024,2132,Chippenham,Vanarama National League South,1,51,87.0,21.0,86.0,18.32,2.03,0.25,0.21,0.0,4.64,2.03,56%
+28095353,Dominic McHale,AM (RLC),27,"5'11""",0,700,,30/6/2024,4209,Scarborough Athletic,Vanarama National League North,1,50,87.0,20.0,77.0,8.55,5.26,0.21,0.21,0.0,8.28,1.56,40%
+2000120902,Lucias Vine,"AM (RL), ST (C)",20,"6'1""",0,0,,-,3275,Aveley,Vanarama National League South,1,44,85.0,17.0,77.0,17.4,2.97,0.25,0.25,0.020000000000000018,6.4,1.68,44%
+2000166560,Luther Munakandafa,"AM (RL), ST (C)",20,"5'9""",0,425,,30/6/2025,3915,Dartford,Vanarama National League South,1,51,88.0,17.0,73.0,18.94,2.46,0.28,0.26,0.0,5.63,2.00,37%
+2000144672,Pharrell Williams,ST (C),20,"5'9""",0,"1,800",,30/6/2027,"2,813",Crawley,Sky Bet League Two,2,50,86.0,18.0,83.0,22.49,1.50,0.22,0.22,0.0,5.66,2.14,42%
+29127859,Frank Mulhern,"AM (RL), ST (C)",28,"5'11""",0,425,Balanced,30/6/2025,"2,468",Scarborough Athletic,Vanarama National League,2,50,84.0,41.0,77.0,19.84,3.06,0.22,0.26,0.04000000000000001,10.43,2.19,30%
+29110719,Josh Amis,ST (C),30,"6'1""",0,0,Balanced,-,"1,350",Barwell,English Southern League Premier Central,2,50,60.0,0,79.0,0.00,0.00,0.2,0.21,0.009999999999999981,0.00,2.33,31%

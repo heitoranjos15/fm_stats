@@ -1,3 +1,11 @@
-UID,Name,Position,Age,Height,Wage,Personality,Expires,Mins,Club,Division,season,possession,Pas %,Hdr %,Tck R,Poss Lost/90,Ps C/90,Gls/90,NP-xG/90,xpG_diff,Sprints/90,Hdr %,Hdrs W/90,Shot/90,Shot %,Offside/90
-29107386,Diego De Girolamo,ST (C),28,"5'10""","1,200",,30/6/2024,4584,Buxton,Vanarama National League North,0,46,87.0,11.0,74.0,4.45,16.43,0.59,0.41,0.0,5.73,11.0,1.47,2.18,50%,
-2000124647,Josiah Dyer,ST (C),19,"5'11""","1,000",,30/6/2025,2198,Warrington,Vanarama National League North,0,46,89.0,11.0,68.0,4.8,19.04,0.61,0.29,0.0,5.45,11.0,1.43,1.88,70%,
+UID,Name,Position,Age,Height,Min WD,Wage,Personality,Expires,Mins,Club,Division,season,possession,Pas %,Hdr %,Tck R,Poss Lost/90,Poss Won/90,Gls/90,NP-xG/90,xpG_diff,Sprints/90,Hdr %,Hdrs W/90,Shot/90,Shot %,Offside/90
+94047015,Aaron Jarvis,ST (C),26,"6'2""",0,"1,500",,30/6/2026,4321,Torquay,Vanarama National League South,1,52,85.0,50.0,86.0,17.97,3.73,0.62,0.33,0.0,6.6,50.0,6.64,2.35,60%,
+29237705,Caleb Chukwuemeka,ST (C),22,"6'3""",0,925,,30/6/2024,3577,King's Lynn,Vanarama National League North,1,50,85.0,32.0,78.0,6.89,4.63,0.7,0.38,0.0,3.52,32.0,4.55,2.69,48%,
+29107362,Danny Whitehall,ST (C),28,"6'3""",0,"1,400",,30/6/2025,2988,Scunthorpe,Vanarama National League North,1,64,86.0,30.0,71.0,11.85,3.86,0.69,0.45,0.0,4.64,30.0,4.07,3.46,48%,
+29103880,Danny Elliott,ST (C),28,"6'0""",0,675,,30/6/2025,1564,Scunthorpe,Vanarama National League North,1,64,86.0,26.0,87.0,19.65,5.81,0.63,0.38,0.020000000000000018,6.73,26.0,2.76,2.82,45%,
+89047064,Ollie Pearce,ST (C),28,"5'6""",0,700,,30/6/2026,3874,Worthing,Vanarama National League South,1,50,85.0,25.0,67.0,14.24,2.46,0.58,0.28,0.0,5.34,25.0,2.83,2.39,53%,
+29107386,Diego De Girolamo,ST (C),28,"5'10""",0,"1,200",,30/6/2024,4584,Buxton,Vanarama National League North,1,48,87.0,11.0,74.0,6.05,3.97,0.59,0.41,0.0,5.73,11.0,1.47,2.18,50%,
+2000124647,Josiah Dyer,ST (C),19,"5'11""",0,"1,000",,30/6/2025,2198,Warrington,Vanarama National League North,1,44,89.0,11.0,68.0,5.62,3.23,0.61,0.29,0.0,5.45,11.0,1.43,1.88,70%,
+2000117446,Harrison Poulter,ST (C),20,"5'10""",0,550,Determined,30/6/2026,"1,288",Scunthorpe,Vanarama National League North,2,50,88.0,18.0,57.0,6.29,2.52,0.7,0.26,0.0,3.77,18.0,1.96,1.96,54%,
+2000117449,Harry Scarborough,"AM (R), ST (C)",22,"6'3""",0,325,Balanced,30/6/2026,"1,165",Boston Utd,Vanarama National League North,2,50,85.0,67.0,75.0,10.12,4.94,0.62,0.42,0.0,4.09,67.0,7.18,3.40,52%,
+29233082,Eno Nto,"AM (RL), ST (C)",22,"5'11""",0,500,,30/6/2025,"1,707",Buxton,Vanarama National League North,2,51,80.0,52.0,94.0,14.38,8.01,0.69,0.34,0.0,7.49,52.0,5.54,3.22,46%,

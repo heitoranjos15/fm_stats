@@ -1,4 +1,3 @@
-UID,Name,Position,Age,Height,Wage,Personality,Expires,Mins,Club,Division,season,possession,Pas %,Hdr %,Tck R,Poss Lost/90,Ps C/90,Pas %,Drb/90,xA/90,Sprints/90,Drb/90,Shot/90,Shot %,xpG_diff
-29217235,Connor Shanks,AM (RL),22,"5'11""",350,,30/6/2025,1675,Spennymoor,Vanarama National League North,0,49,84.0,21.0,86.0,15.53,27.73,84.0,4.42,0.26,13.7,4.42,1.99,41%,
-29224247,Corey McKeown,AM (RL),22,"5'10""",725,,30/6/2025,3989,Spennymoor,Vanarama National League North,0,49,86.0,16.0,82.0,14.76,27.12,86.0,4.44,0.26,15.23,4.44,1.44,44%,
-61071573,Justin Johnson,M/AM (RL),27,"5'7""",700,,30/6/2026,3966,Chorley,Vanarama National League North,0,53,88.0,13.0,77.0,12.8,32.38,88.0,4.41,0.23,8.62,4.41,1.45,45%,
+UID,Name,Position,Age,Height,Min WD,Wage,Personality,Expires,Mins,Club,Division,season,possession,Pas %,Hdr %,Tck R,Poss Lost/90,Poss Won/90,Pas %,Drb/90,xA/90,Sprints/90,Drb/90,Shot/90,Shot %,xpG_diff
+28128056,Joe Oliver,D/WB (R),21,"6'0""",0,375,,30/6/2025,4139,Blyth,Vanarama National League North,1,64,85.0,59.0,84.0,18.96,13.2,85.0,4.61,0.27,18.81,4.61,0.57,42%,0.0
+61071573,Justin Johnson,M/AM (RL),27,"5'7""",0,700,,30/6/2026,3966,Chorley,Vanarama National League North,1,59,88.0,13.0,77.0,12.8,6.56,88.0,6.17,0.23,8.62,6.17,1.45,45%,0.0
