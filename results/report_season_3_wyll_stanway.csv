@@ -1,1 +1,6 @@
-UID,Name,Position,Age,Height,Min WD,Wage,Personality,Expires,Mins,Club,Division,season,possession,Pas %,Hdr %,Tck R,Poss Lost/90,Poss Won/90,Pr passes/90,Poss Won/90,Con/90
+UID,Name,Position,Age,Height,Min WD,Wage,Personality,Expires,Mins,Club,Division,season,possession,Pas %,Hdr %,Tck R,Poss Lost/90,Poss Won/90,Pr passes/90,xGP/90,xGP/90,Sv %,xSv %,Pens Saved Ratio,Pens Saved/90
+5112026,Paul Jones,GK,37,"6'3""",0,825,,30/6/2025,1350,King's Lynn,Vanarama National League North,1,50,33.0,0,0.0,16.6,7.93,1.07,0.99,0.99,,,,
+90038591,Aaron Chapman,GK,34,"6'8""",0,0,,-,1658,Boston Utd,Vanarama National League North,1,58,41.0,0,0.0,14.74,6.46,0.98,0.49,0.49,,,,
+2000191455,Kier Barry,GK,18,"6'2""",0,60,,30/6/2024,1260,Chorley,Vanarama National League North,1,59,76.0,0,33.0,8.98,9.36,0.93,0.38,0.38,,,,
+19118610,Lucas Covolan,GK,32,"6'4""",0,825,,30/6/2024,3251,Maidstone,Vanarama National League South,1,50,52.0,0,0.0,9.83,2.71,0.08,0.38,0.38,,,,
+90052878,Peter Jameson,GK,32,"6'3""",0,100,,30/6/2025,"2,610",Caernarfon,JD Cymru Premier,2,50,43.0,0,0.0,6.62,4.28,0.0,0.38,0.38,,88%,0%,
