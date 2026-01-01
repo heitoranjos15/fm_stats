@@ -6,8 +6,8 @@ import re
 from jinja2 import Template
 
 # Setup
-season_number = 1
-percentage = 0.85
+season_number = 3
+percentage = 0.7
 minutes_played = 900
 
 
@@ -16,39 +16,36 @@ add_possession = ["Poss Lost/90", "Poss Won/90", "Pres A/90",
                   "Clr/90", "Int/90", "Shot/90", "xG-OP", "Sprints/90", "Drb/90"]
 
 
-# Rec,Inf,UID,Name,Nat,2nd Nat,Age,Position,Club,Division,Wage,Mins,Height,Weight,Loan Expires,Expires,Min WD,Max AP,Max WD,Min AP,NP-xG/90,NP-xG,xGP/90,Clr/90,Int/90,Tck/90,Tck R,Tck W,Blk/90,Hdr %,Hdrs W/90,Poss Won/90,Pres A/90,Poss Lost/90,Pas %,Ps C/90,Pr passes/90,Asts/90,xA/90,Cr C/90,Drb/90,Shot %,Shot/90,ShT/90,xG/90,xG-OP,Gls/90,xG,Sprints/90
-
-
 styles_comparison = {
-    "gk": ["Poss Lost/90", "Poss Won/90", "Clr/90"],
-    "dc": ["Hdr %", "Int/90", "Tck R"],
-    "dm": ["Pas %", "Poss Lost/90", "Int/90", "Hdr %"],
-    "fb": ["Tck R", "Hdr %", "Poss Won/90"],
-    "wb": ["Tck R", "Pr passes/90", "xA/90"],
-    "mc": ["Pas %", "Poss Lost/90", "Pr passes/90"],
-    "ms": ["xA/90", "NP-xG/90"],
-    "ml": ["Pas %", "Drb/90", "xA/90"],
-    "mr": ["Pas %", "Pr passes/90", "xpG_diff"],
-    "sc": ["Gls/90", "NP-xG/90", "xpG_diff"],
+    "gk": ["Poss Won/90"],
+    "dc": ["Hdr %", "Tck R"],
+    "dm": ["Pass %", "Pr passes/90", "Poss Lost/90"],
+    "fb": ["Hdr %", "Tck R"],
+    "wb": ["Pr passes/90", "Tck R"],
+    "mc": ["Tck R", "Pres A"],
+    "ms": ["Drb/90", "xA/90", "xpG_diff"],
+    "ml": ["Drb/90", "Pr passes/90"],
+    "mr": ["Drb/90", "xpG_diff"],
+    "sc": ["Drb/90", "Pass %", "xpG_diff"],
 }
 
 general_colums = ["UID", "Name", "Position", "Age", "Height", "Min WD", "Wage", "Personality",
                   "Expires", "Mins", "Club", "Division", "season", "possession"]
 
-dna_stats = ["Pas %", "Hdr %", "Tck R", "Poss Lost/90", "Poss Won/90"]
+dna_stats = ["Pas %", "Hdr %", "Tck R", "Poss Lost/90", "Poss Won/90", "Pr passes/90"]
 
 display_columns = {
-    "gk": [],
-    "dc": ["Hdrs W/90", "Tck/90", "Blk/90", "Poss Won/90", "Poss Lost/90"],
-    "dm": ["Tck/90", "Pr passes/90"],
-    "fb": ["Pr passes/90", "Tck/90"],
+    "gk": ["xGP/90", "Sv %", "xSv %", "Pens Saved Ratio", "Pens Saved/90"],
+    "dc": ["Hdr %", "Hdrs W/90", "Int/90", "Tck R", "Tck/90", "Blk/90", "Poss Won/90", "Pas %" "Poss Lost/90"],
+    "dm": ["Tck R", "Tck/90", "Pr passes/90", "Hdrs W/90", "Hdr %", "Pass %", "Poss Won/90"],
+    "fb": ["Pr passes/90", "Tck/90", "Pass %"],
     "wb": ["Tck/90", "Hdrs W/90", "Hdr %"],
-    "mc": ["Drb/90", "xA/90", "Shot/90", "Shot %"],
+    "mc": ["Drb/90", "xA/90", "Shot/90", "Shot %", "Pr passes/90", "xpG_diff"],
     "ms": ["Sprints/90", "Drb/90", "Shot/90", "Shot %", "xpG_diff"],
     "ml": ["Sprints/90", "Drb/90", "Shot/90", "Shot %", "xpG_diff"],
     "mr": ["Sprints/90", "Shot/90", "Shot %"],
     "sc": ["Sprints/90", "Hdr %", "Hdrs W/90", "Shot/90", "Shot %", "Offside/90"],
-    "fa": ["p/90", "Pas A", "Pr passes/90", "Hdrs W/90", "xA/90", "NP-xG/90", "Gls/90", "xG/90", "Shot/90", "Shot %", "Hdrs W/90", "Hdr %"]
+    # "fa": ["p/90", "Pas A", "Pr passes/90", "Hdrs W/90", "xA/90", "NP-xG/90", "Gls/90", "xG/90", "Shot/90", "Shot %", "Hdrs W/90", "Hdr %"]
 }
 
 
@@ -126,7 +123,7 @@ def fa_report(fa_db) -> list:
     for player in fa_db:
         match = re.search(r"[\d,]+", player.get("Wage", "0"))
         player["Wage"] = match.group(0) if match else "0"
-        if not player["Min WD"] == "N/A":
+        if not player.get("Min WD") == "N/A":
             match = re.search(r"[\d,]+", player.get("Min WD", "0"))
             player["Min WD"] = match.group(0) if match else "0"
 
@@ -151,19 +148,20 @@ def compare_players(season_data, possession_db, style, player_data, season) -> l
     comparisons = styles_comparison.get(style, [])
     player_matches = []
     for compare in season_data:
-        if not valid_dna(player_data, compare):
+        if not valid_dna(player_data, compare) and style != "gk":
             continue
         match = re.search(r"[\d,]+", compare.get("Wage", "0"))
         compare["Wage"] = match.group(0) if match else "0"
-        if not compare["Min WD"] == "N/A":
+        if not compare.get("Min WD") == "N/A":
             match = re.search(r"[\d,]+", compare.get("Min WD", "0"))
             compare["Min WD"] = match.group(0) if match else "0"
 
-        if style == "gk" and compare.get("Position") != "GK":
-            continue
+        if style == "gk":
+            print(f"debug {player_data.get("xGP/90")} {compare.get("xGP/90")}")
+
         if style in ["mr", "st"]:
-            expect_goals_diff = round(
-                clean_number(compare.get("xG/90")) - clean_number(compare.get("Gls/90")), 2)
+            expect_goals_diff = clean_number(compare.get("xG/90")) - clean_number(compare.get("Gls/90"))
+            print(f"xG/90={compare.get('xG/90')} - Gls/90={compare.get('Gls/90')} = xpG_diff={expect_goals_diff}")
             if expect_goals_diff < 0:
                 continue
             compare["xpG_diff"] = expect_goals_diff
@@ -174,8 +172,10 @@ def compare_players(season_data, possession_db, style, player_data, season) -> l
         if minutes_played > int(minutes_played_value):
             continue
         match_count = 0
-        possession_compare = find_player_possession(compare["Club"], possession_db)
-        possession_player = find_player_possession(player_data["Club"], possession_db)
+        club = compare.get("Club", "Chorley")
+        possession_compare = find_player_possession(club, possession_db)
+        club = player_data.get("Club", "Chorley")
+        possession_player = find_player_possession(club, possession_db)
         for key in comparisons:
 
             if key == "Offside/90" and "Offside/90" not in compare:
@@ -215,6 +215,9 @@ def compare_players(season_data, possession_db, style, player_data, season) -> l
                     match_count += 1
 
         if match_count >= matches_min:
+            compare["Poss Lost/90"] = clean_number(compare.get("Poss Lost/90"))
+            compare["Poss Won/90"] = clean_number(compare.get("Poss Won/90"))
+            compare["Pr passes/90"] = clean_number(compare.get("Pr passes/90"))
             player_matches.append(compare)
     return player_matches
 
@@ -249,6 +252,7 @@ def generate_html(players, style, file_name):
     else:
         columns = general_colums + dna_stats + styles_comparison[style] + display_columns[style]
 
+    print("hey", columns)
     html = template.render(players=players, all_keys=columns)
 
     os.makedirs("results", exist_ok=True)
@@ -276,42 +280,45 @@ def find_players(player_to_compare, style, season_db, possession_db):
         if i >= len(possession_db):
             continue
 
+        print(f"Comparing in season {i + 1}")
         player_matches = compare_players(
             season, possession_db[i], style, player_to_compare, i)
         if player_matches:
+            print(f"  Found {len(player_matches)} matches in season {i + 1}")
             players_found.extend(player_matches)
+            print(len(players_found))
     return players_found
 
 
 if __name__ == "__main__":
 
     season_db = load_database()
-    fa_db = load_fa_database()
-
-    def get_data_from_last_season(player):
-        player_stats = next(filter(lambda x: x.get("UID") == player.get("UID"), season_db[season_number]), None)
-        
-        if not player_stats:
-            return None
-
-        player_stats["Min WD"] = player.get("Min WD", "N/A")
-        return player_stats
-
-    player_stats = filter(lambda x: x, map(get_data_from_last_season, fa_db))
-
-    fa_players = fa_report(player_stats)
-    generate_html(fa_players, "fa", "free_agents")
-    print(f"Found {len(fa_players)} free agent players matching DNA criteria.")
-
-    # possession_db = load_possession_database()
-    # players_to_compare = load_roster_database(season_number)
+    # fa_db = load_fa_database()
     #
-    # for p in players_to_compare:
-    #     style = p.get("style")
-    #     print(f"Finding players similar to {p.get('Name')} ({style})")
-    #     if minutes_played > int(p.get("Mins", "0").replace(',', '')):
-    #         continue
-    #     players_found = find_players(p, style, season_db, possession_db)
-    #     print(f"Found {len(players_found)} similar players.")
-    #     generate_html(players_found, style, p.get("Name"))
-    #     generate_csv(players_found, style, p.get("Name"))
+    # def get_data_from_last_season(player):
+    #     player_stats = next(filter(lambda x: x.get("UID") == player.get("UID"), season_db[season_number]), None)
+    #     
+    #     if not player_stats:
+    #         return None
+    #
+    #     player_stats["Min WD"] = player.get("Min WD", "N/A")
+    #     return player_stats
+    #
+    # player_stats = filter(lambda x: x, map(get_data_from_last_season, fa_db))
+    #
+    # fa_players = fa_report(player_stats)
+    # generate_html(fa_players, "fa", "free_agents")
+    # print(f"Found {len(fa_players)} free agent players matching DNA criteria.")
+
+    possession_db = load_possession_database()
+    players_to_compare = load_roster_database(season_number)
+
+    for p in players_to_compare:
+        style = p.get("style")
+        print(f"Finding players similar to {p.get('Name')} ({style})")
+        if minutes_played > int(p.get("Mins", "0").replace(',', '')):
+            continue
+        players_found = find_players(p, style, season_db, possession_db)
+        print(f"Found {len(players_found)} similar players.")
+        generate_html(players_found, style, p.get("Name"))
+        generate_csv(players_found, style, p.get("Name"))
