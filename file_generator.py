@@ -17,9 +17,8 @@ gk_columns = [
 ]
 
 def_columns = [
-    "defensive_score",
-    "int_ratio",
     "poss_won_90",
+    "clr_90",
     "int_90",
     "hdr_pct",
     "hdrs_w_90",
@@ -27,10 +26,10 @@ def_columns = [
     "blk_90",
     "tck_w",
     "tck_r",
+    "dist_90",
 ]
 
 poss_columns = [
-    "possession_score",
     "pres_a_90",
     "pres_c_90",
     "poss_lost_90",
@@ -42,12 +41,19 @@ poss_columns = [
 ]
 
 atck_columns = [
+    "kpass_90",
+    "sht_90",
+    "sht_pct",
+    "shot_90",
+    "hdrs_w_90",
+    "hdr_pct",
     "gls",
     "gls_90",
     "np_xg",
     "np_xg_90",
     "asts_90",
     "crs_a_90",
+    "cr_c_90",
     "xpg_diff_90",
 ]
 

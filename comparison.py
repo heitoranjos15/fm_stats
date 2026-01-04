@@ -16,7 +16,7 @@ def load_db(db_path: str, name: str) -> list[dict]:
     csv_files = glob.glob(os.path.join(db_path, f"{name}*.csv"))
     for csv_file in csv_files:
         season = int(csv_file.split("season_")[-1].split(".csv")[0])
-        if season > 2:
+        if season > 4:
             with open(csv_file, "r", encoding="utf-8") as f:
                 reader = csv.DictReader(f)
                 for row in reader:
@@ -72,7 +72,7 @@ def apply_filter(player, stats, off_filter, match_pct):
 def main():
     dbs_dir = path.join(path.dirname(__file__), "db")
     season_db = load_db(dbs_dir, "season")
-    roster_db = load_db(dbs_dir, "roster_season_4")
+    roster_db = load_db(dbs_dir, "roster_season_5")
 
     matches = []
     for player_entry in roster_db:
