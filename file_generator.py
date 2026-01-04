@@ -1,9 +1,10 @@
 from jinja2 import Template
+import os
 
-details_columns = ["uid", "name", "position", "club", "nat", "age", "height", "weight", "transfer_value", "wage", "expires" "personality", "season", "mins", "]
+details_columns = ["uid", "name", "position", "club", "nat", "age", "height", "weight", "transfer_value", "wage", "expires", "personality", "season", "mins"]
 
 gk_columns = [
-    "clean_sheets"
+    "clean_sheets",
     "cln_90",
     "con_90",
     "pens_saved",
@@ -35,7 +36,7 @@ poss_columns = [
     "poss_lost_90",
     "pr_passes_90",
     "pas_pct",
-    "pas_a_90",
+    "ps_a_90",
     "xa_90",
     "drb_90",
 ]
@@ -52,31 +53,58 @@ atck_columns = [
 
 
 def generate_html(player_compared: dict, matched_players: list[dict]) -> str:
+    column_groups = [
+        ("Details", details_columns),
+        ("GK", gk_columns),
+        ("DEF", def_columns),
+        ("Poss", poss_columns),
+        ("Atck", atck_columns),
+    ]
+    all_columns = [col for _, cols in column_groups for col in cols]
+
     template_str = """
     <table border="1">
       <thead>
         <tr>
-          {% for key in all_keys %}
-            <th>{{ key }}</th>
+          {% for group, cols in column_groups %}
+            <th colspan="{{ cols|length }}">{{ group }}</th>
+          {% endfor %}
+        </tr>
+        <tr>
+          {% for col in all_columns %}
+            <th>{{ col }}</th>
           {% endfor %}
         </tr>
       </thead>
       <tbody>
-        <tr><td>{{ player_compared.get(key, "") }}</td></tr>
+        <tr>
+          {% for col in all_columns %}
+            <td>{{ player_compared.get(col, "") }}</td>
+          {% endfor %}
+        </tr>
         {% for player in matched_players %}
           <tr>
-            {% for key in all_keys %}
-              <td>{{ player.get(key, "") }}</td>
+            {% for col in all_columns %}
+              <td>{{ player.get(col, "") }}</td>
             {% endfor %}
           </tr>
         {% endfor %}
       </tbody>
     </table>
     """
-    template = template.Template(player_compared, matched_players, details_columns, gk_columns, def_columns, poss_columns, atck_columns)
+
+    template = Template(template_str)
+    html = template.render(
+        player_compared=player_compared,
+        matched_players=matched_players,
+        column_groups=column_groups,
+        all_columns=all_columns,
+    )
 
     os.makedirs("output", exist_ok=True)
-    with open(f"output/report_season_{player_compared['season']_{player_compared['style']_{player_compared['name']}.html", "w", encoding="utf-8") as f:
-        f.write(html_content)
-
-
+    with open(
+        f"output/report_season_{player_compared['season']}_{player_compared['style']}_{player_compared['name']}.html",
+        "w",
+        encoding="utf-8"
+    ) as f:
+        f.write(html)

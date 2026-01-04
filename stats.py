@@ -15,7 +15,7 @@ class Stats:
     def __init__(self, data: dict, season):
         def format_string(value):
             if isinstance(value, str):
-                return value.replace(",", "").replace("-", "0").replace("N/A", "0").replace("km", "").strip()
+                return value.replace(",", "").replace("-", "0").replace("N/A", "0").replace("km", "").replace("%", "").strip()
             return value
 
         def to_float(value):
@@ -23,6 +23,28 @@ class Stats:
                 return float(format_string(value))
             except (ValueError, TypeError):
                 return 0.0
+
+        def format_wage(value):
+            if isinstance(value, str):
+                return value.replace("€", "").replace("N/A", "0").replace("-", "0").replace(",", "").replace("p/w", "").strip()
+            return value
+        self.uid = data.get("UID")
+        self.name = data.get("Name")
+        self.position = data.get("Position")
+        self.club = data.get("Club")
+        self.nat = data.get("Nat")
+        self.height = data.get("Height")
+        self.weight = data.get("Weight")
+        self.age = data.get("Age")
+        self.transfer_value = data.get("Transfer Value")
+        self.wage = format_wage(data.get("Wage"))
+        self.best_pos = data.get("Best Pos")
+        self.style = ""
+        if data.get("style"):
+            self.style = data.get("style").strip()
+        self.match_pct = data.get("Match Pct", 80)
+        self.match_min = data.get("Match Min", 3)
+        self.season = season
 
         self.minutes = to_float(data.get("Mins", 0))
         self.clean_sheets = to_float(data.get("Clean Sheets"))
@@ -79,10 +101,10 @@ class Stats:
         self.poss_won_90 = to_float(data.get("Poss Won/90"))
         self.pres_a = to_float(data.get("Pres A"))
         self.pres_c = to_float(data.get("Pres C"))
-        self.pres_c_90 = to_float(data.get("Pres C/90"))
-        self.pres_a_90 = to_float(data.get("Pres A/90"))
+        self.pres_c_90 = to_float(data.get("Ps C/90"))
+        self.pres_a_90 = to_float(data.get("Ps A/90"))
         self.pr_passes = to_float(data.get("Pr Passes"))
-        self.pr_passes_90 = to_float(data.get("Pr Passes/90"))
+        self.pr_passes_90 = to_float(data.get("Pr passes/90"))
         self.sv_pct = to_float(data.get("Sv %"))
         self.svh = to_float(data.get("Svh"))
         self.svp = to_float(data.get("Svp"))
@@ -92,7 +114,7 @@ class Stats:
         self.sht_90 = to_float(data.get("ShT/90"))
         self.shot_pct = to_float(data.get("Shot %"))
         self.shot_90 = to_float(data.get("Shot/90"))
-        self.tck_r = to_float(data.get("Tck R"))
+        self.tck_r = to_float(format_string(data.get("Tck R")))
         self.tck_a = to_float(data.get("Tck A"))
         self.tck_w = to_float(data.get("Tck W"))
         self.tck_90 = to_float(data.get("Tck/90"))
@@ -109,7 +131,9 @@ class Stats:
         self.defensive_score = (
             self.int_90 + self.clr_90 + self.blk_90 + self.tck_90
         ) / 4
-        self.int_ratio = self.int_90 / self.defensive_score
+        self.int_ratio = 0.0
+        if self.defensive_score > 0:
+            self.int_ratio = self.int_90 / self.defensive_score
         self.possession_score = (
             self.poss_won_90 + self.pr_passes_90 + self.pres_a_90
         ) / 3
@@ -118,94 +142,5 @@ class Stats:
         ) / 4
 
     def to_dict(self):
-        return {
-            "uid": self.uid,
-            "name": self.name,
-            "position": self.position,
-            "club": self.club,
-            "nat": self.nat,
-            "height": self.height,
-            "weight": self.weight,
-            "age": self.age,
-            "transfer_value": self.transfer_value,
-            "wage": self.wage,
-            "best_pos": self.best_pos,
-            "ability": self.ability,
-            "clean_sheets": self.clean_sheets,
-            "cln_90": self.cln_90,
-            "con_90": self.con_90,
-            "xa": self.xa,
-            "xa_90": self.xa_90,
-            "xg_op": self.xg_op,
-            "xg_90": self.xg_90,
-            "g_mis": self.g_mis,
-            "gls_90": self.gls_90,
-            "conc": self.conc,
-            "gls": self.gls,
-            "mins": self.mins,
-            "np_xg": self.np_xg,
-            "np_xg_90": self.np_xg_90,
-            "pens_faced": self.pens_faced,
-            "pens_saved": self.pens_saved,
-            "pens_saved_ratio": self.pens_saved_ratio,
-            "xg": self.xg,
-            "asts_90": self.asts_90,
-            "blk": self.blk,
-            "blk_90": self.blk_90,
-            "clear": self.clear,
-            "clr_90": self.clr_90,
-            "conv_pct": self.conv_pct,
-            "cr_c_a": self.cr_c_a,
-            "cr_a": self.cr_a,
-            "crs_a_90": self.crs_a_90,
-            "cr_c": self.cr_c,
-            "cr_c_90": self.cr_c_90,
-            "distance": self.distance,
-            "dist_90": self.dist_90,
-            "drb": self.drb,
-            "drb_90": self.drb_90,
-            "xg_shot": self.xg_shot,
-            "xgp": self.xgp,
-            "xgp_90": self.xgp_90,
-            "xsv_pct": self.xsv_pct,
-            "hdrs": self.hdrs,
-            "hdrs_w_90": self.hdrs_w_90,
-            "hdr_pct": self.hdr_pct,
-            "sprints_90": self.sprints_90,
-            "itc": self.itc,
-            "int_90": self.int_90,
-            "off": self.off,
-            "pas_a": self.pas_a,
-            "ps_a_90": self.ps_a_90,
-            "pas_pct": self.pas_pct,
-            "ps_c": self.ps_c,
-            "ps_c_90": self.ps_c_90,
-            "poss_lost_90": self.poss_lost_90,
-            "poss_won_90": self.poss_won_90,
-            "pres_a": self.pres_a,
-            "pres_a_90": self.pres_a_90,
-            "pres_c": self.pres_c,
-            "pres_c_90": self.pres_c_90,
-            "pr_passes": self.pr_passes,
-            "pr_passes_90": self.pr_passes_90,
-            "sv_pct": self.sv_pct,
-            "svh": self.svh,
-            "svp": self.svp,
-            "svt": self.svt,
-            "shots": self.shots,
-            "sht": self.sht,
-            "sht_90": self.sht_90,
-            "shot_pct": self.shot_pct,
-            "shot_90": self.shot_90,
-            "tck_r": self.tck_r,
-            "tck_a": self.tck_a,
-            "tck_w": self.tck_w,
-            "tck_90": self.tck_90,
-            "turn_diff": self.turn_diff,
-            "xpg_diff": self.xpg_diff,
-            "defensive_score": self.defensive_score,
-            "possession_score": self.possession_score,
-            "offensive_score": self.offensive_score,
-            "int_ratio": self.int_ratio,
-        }
+        return self.__dict__
 
