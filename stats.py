@@ -4,7 +4,7 @@ def possession_factor(per_90_stat, possession: int) -> float:
     return per_90_stat / (100 - possession) * 50
 
 
-def per_90(value: int, minutes: int, possession = 50) -> float:
+def per_90(value: int, minutes: int, possession=50) -> float:
     if minutes == 0:
         return 0.0
     offsides_per_90 = (value / minutes) * 90
@@ -74,8 +74,9 @@ class Stats:
         self.conv_pct = to_float(data.get("Conv %"))
         self.cr_c_a = to_float(data.get("Cr C/A"))
         self.cr_a = to_float(data.get("Cr A"))
-        self.crs_a_90 = to_float(data.get("Crs A/90"))
         self.cr_c = to_float(data.get("Cr C"))
+        self.crs_a_90 = to_float(data.get("Crs A/90"))
+        self.crs_pct = round(to_float(self.cr_a / self.cr_c) if self.cr_c > 0 else 0.0, 2)
         self.cr_c_90 = to_float(data.get("Cr C/90"))
         self.distance = to_float(data.get("Distance"))
         self.dist_90 = to_float(data.get("Dist/90"))
@@ -125,21 +126,23 @@ class Stats:
         self.tck_w_90 = per_90(self.tck_w, self.mins)
         self.off_90 = per_90(self.off, self.minutes)
 
-        self.turn_diff = self.poss_won_90 - self.poss_lost_90
-        self.xpg_diff = self.gls_90 - self.xg_90
+        self.turn_diff = round(self.poss_won_90 - self.poss_lost_90, 2)
+        self.xpg_diff = round(self.gls_90 - self.xg_90, 2)
+        print(self.name, self.gls_90, self.xg_90, self.xpg_diff)
 
-        self.defensive_score = (
+        self.defensive_score = round((
             self.int_90 + self.clr_90 + self.blk_90 + self.tck_90
-        ) / 4
+        ) / 4)
+        # print(self.name, self.int_90, self.clr_90, self.blk_90, self.tck_90, self.defensive_score)
         self.int_ratio = 0.0
         if self.defensive_score > 0:
-            self.int_ratio = self.int_90 / self.defensive_score
-        self.possession_score = (
+            self.int_ratio = round(self.int_90 / self.defensive_score)
+        self.possession_score = round((
             self.poss_won_90 + self.pr_passes_90 + self.pres_a_90
-        ) / 3
-        self.offensive_score = (
+        ) / 3)
+        self.offensive_score = round((
             self.asts_90 + self.gls_90 + self.crs_a_90 + self.xa_90
-        ) / 4
+        ) / 4)
 
     def to_dict(self):
         return self.__dict__

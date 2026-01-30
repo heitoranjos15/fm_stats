@@ -34,14 +34,22 @@ def mc_filters():
 
 
 def ms_filters():
+<<<<<<< Updated upstream
     offensive_filters = ["pas_pct", "xa_90", "xpg_diff_90", "poss_lost_90"]
+=======
+    offensive_filters = ["pas_pct", "xa_90", "drb_90"]
+>>>>>>> Stashed changes
     defensive_filters = ["tck_w", "poss_won_90"]
     # return {"off": offensive_filters, "def": defensive_filters}
     return {"off": offensive_filters}
 
 
 def f9_filters():
+<<<<<<< Updated upstream
     offensive_filters = ["pas_pct", "drb_90", "xa_90"]
+=======
+    offensive_filters = ["drb_90", "xa_90", "xgp_90"]
+>>>>>>> Stashed changes
     defensive_filters = ["tck_w", "poss_won_90", "pres_a_90"]
     # return {"off": offensive_filters, "def": defensive_filters}
     return {"off": offensive_filters}
@@ -52,7 +60,11 @@ def wp_filters():
 
 
 def raumdeuter_filters():
+<<<<<<< Updated upstream
     offensive_filters = ["pas_pct", "drb_90", "shot_pct", "hdrs_w_90", "xpg_diff_90"]
+=======
+    offensive_filters = ["pas_pct", "drb_90", "gls_90"]
+>>>>>>> Stashed changes
     defensive_filters = ["int_90", "tck_w", "poss_won_90"]
     # return {"off": offensive_filters, "def": defensive_filters}
     return {"off": offensive_filters}

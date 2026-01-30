@@ -8,7 +8,7 @@ from player import Player
 from os import path
 
 
-from file_generator import generate_html
+from file_generator import generate_html, generate_csv
 
 
 def load_db(db_path: str, name: str) -> list[dict]:
@@ -16,7 +16,11 @@ def load_db(db_path: str, name: str) -> list[dict]:
     csv_files = glob.glob(os.path.join(db_path, f"{name}*.csv"))
     for csv_file in csv_files:
         season = int(csv_file.split("season_")[-1].split(".csv")[0])
+<<<<<<< Updated upstream
         if season > 4:
+=======
+        if season > 3:
+>>>>>>> Stashed changes
             with open(csv_file, "r", encoding="utf-8") as f:
                 reader = csv.DictReader(f)
                 for row in reader:
@@ -43,6 +47,8 @@ def find_players(player: dict, db: list[dict], style, match_pct, match_min) -> l
     filters = filter_func()
 
     for entry in db:
+        if int(entry.get("age")) >= 33:
+            continue
         score_match = 0
         for name, filter_keys in filters.items():
             if score_match >= match_min:
@@ -77,7 +83,7 @@ def main():
     matches = []
     for player_entry in roster_db:
         player_style = player_entry.get("style")
-        match_pct = 80
+        match_pct = 85
         match_min = 3
         matched_players = find_players(
             player_entry, season_db, player_style, match_pct, match_min)
@@ -88,6 +94,9 @@ def main():
         player_entry = match["player"]
         matched_players = match["matches"]
         generate_html(
+            player_entry, matched_players
+        )
+        generate_csv(
             player_entry, matched_players
         )
         print(
