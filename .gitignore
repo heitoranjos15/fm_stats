@@ -1,0 +1,94 @@
+# Python-specific
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.pyc
+*.pyo
+*.pyd
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+.tox/
+.nox/
+.cache/
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+sdist/
+var/
+*.egg
+*.eggs/
+*.manifest
+*.spec
+pip-selfcheck.json
+
+# Virtual environments
+venv/
+env/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDEs and editors
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Testing & coverage
+.coverage.*
+coverage/
+coverage.lcov
+nosetests.xml
+test-results/
+pytestdebug.log
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+*.sqlite3
+db.sqlite3
+
+# Dependency management
+Pipfile.lock
+poetry.lock
+requirements.txt.lock
+
+# Jupyter Notebooks (if you ever add any)
+.ipynb_checkpoints/
+*.ipynb_checkpoints/
+
+# macOS junk
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows junk
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Project-specific (add your own folders here)
+data/fm_data/           # ← raw FM save files (big, don't commit)
+output/                 # ← generated HTML reports
+results/                # ← final CSVs, plots, etc.
+db/                     # ← if it contains the actual database file
+
+# Keep these if they're small config/templates, otherwise ignore
+# config.ini
+# secrets.toml

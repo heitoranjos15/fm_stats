@@ -53,96 +53,27 @@
   <table class="comparison-table" id="comparisonTable">
     <thead>
       <tr>
-        
-          <th onclick="sortTable(0, this)">Uid</th>
-        
-          <th onclick="sortTable(1, this)">Name</th>
-        
-          <th onclick="sortTable(2, this)">Club</th>
-        
-          <th onclick="sortTable(3, this)">Nat</th>
-        
-          <th onclick="sortTable(4, this)">Height</th>
-        
-          <th onclick="sortTable(5, this)">Age</th>
-        
-          <th onclick="sortTable(6, this)">Wage</th>
-        
-          <th onclick="sortTable(7, this)">Best_pos</th>
-        
-          <th onclick="sortTable(8, this)">Minutes</th>
-        
-          <th onclick="sortTable(9, this)">Sv_pct</th>
-        
-          <th onclick="sortTable(10, this)">Svh</th>
-        
-          <th onclick="sortTable(11, this)">Svp</th>
-        
-          <th onclick="sortTable(12, this)">Svt</th>
-        
-          <th onclick="sortTable(13, this)">Goals_against</th>
-        
-          <th onclick="sortTable(14, this)">Clean_sheets</th>
-        
-          <th onclick="sortTable(15, this)">Pen_saves</th>
-        
-          <th onclick="sortTable(16, this)">Pen_missed</th>
-        
-          <th onclick="sortTable(17, this)">Poss_lost_90</th>
-        
-          <th onclick="sortTable(18, this)">Pr_passes_90</th>
-        
-          <th onclick="sortTable(19, this)">Tck_r</th>
-        
+        {% for col in display_columns %}
+          <th onclick="sortTable({{ loop.index0 }}, this)">{{ col|capitalize }}</th>
+        {% endfor %}
         <th>Remove</th>
       </tr>
     </thead>
     <tbody>
       <tr class="frozen-row">
-        
-          <td>2000191455</td>
-        
-          <td>Kier Barry</td>
-        
-          <td>Chorley</td>
-        
-          <td>ENG</td>
-        
-          <td>6'4"</td>
-        
-          <td>18</td>
-        
-          <td>60</td>
-        
-          <td>GK</td>
-        
-          <td>0.0</td>
-        
-          <td>0.0</td>
-        
-          <td>0.0</td>
-        
-          <td>0.0</td>
-        
-          <td>0.0</td>
-        
-          <td></td>
-        
-          <td>0.0</td>
-        
-          <td></td>
-        
-          <td></td>
-        
-          <td>0.0</td>
-        
-          <td>0.0</td>
-        
-          <td>0.0</td>
-        
+        {% for col in display_columns %}
+          <td>{{ player[col] }}</td>
+        {% endfor %}
         <td></td>
       </tr>
-      
+      {% for match in matches %}
+        <tr>
+          {% for col in display_columns %}
+            <td>{{ match[col] }}</td>
+          {% endfor %}
+          <td><button class="remove-btn" onclick="removeRow(this)">Remove</button></td>
+        </tr>
+      {% endfor %}
     </tbody>
   </table>
 
@@ -193,3 +124,4 @@
   </script>
 </body>
 </html>
+

@@ -1,2570 +1,293 @@
-
-    <table border="1">
-      <thead>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Player Comparison</title>
+  <style>
+    .comparison-table {
+      border-collapse: collapse;
+      width: 100%;
+      table-layout: fixed;
+    }
+    .comparison-table th, .comparison-table td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+      word-break: break-word;
+    }
+    .comparison-table th {
+      background-color: #f2f2f2;
+      cursor: pointer;
+      transition: background 0.2s;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+    .comparison-table th.sorted-asc {
+      background-color: #d0eaff;
+    }
+    .comparison-table th.sorted-desc {
+      background-color: #ffd0d0;
+    }
+    .frozen-row td {
+      background: #e8e8e8;
+      font-weight: bold;
+      position: sticky;
+      top: 38px; /* Height of the header row */
+      z-index: 1;
+    }
+    .remove-btn {
+      background: #ff6666;
+      color: white;
+      border: none;
+      padding: 4px 8px;
+      cursor: pointer;
+      border-radius: 3px;
+    }
+    .remove-btn:hover {
+      background: #cc0000;
+    }
+  </style>
+</head>
+<body>
+  <h2>Player Comparison</h2>
+  <table class="comparison-table" id="comparisonTable">
+    <thead>
+      <tr>
+        
+          <th onclick="sortTable(0, this)">Uid</th>
+        
+          <th onclick="sortTable(1, this)">Name</th>
+        
+          <th onclick="sortTable(2, this)">Club</th>
+        
+          <th onclick="sortTable(3, this)">Nat</th>
+        
+          <th onclick="sortTable(4, this)">Height</th>
+        
+          <th onclick="sortTable(5, this)">Age</th>
+        
+          <th onclick="sortTable(6, this)">Wage</th>
+        
+          <th onclick="sortTable(7, this)">Best_pos</th>
+        
+          <th onclick="sortTable(8, this)">Minutes</th>
+        
+          <th onclick="sortTable(9, this)">Int_90</th>
+        
+          <th onclick="sortTable(10, this)">Poss_won_90</th>
+        
+          <th onclick="sortTable(11, this)">Poss_lost_90</th>
+        
+          <th onclick="sortTable(12, this)">Turn_diff</th>
+        
+          <th onclick="sortTable(13, this)">Tck_w</th>
+        
+          <th onclick="sortTable(14, this)">Tck_r</th>
+        
+          <th onclick="sortTable(15, this)">Xa_90</th>
+        
+          <th onclick="sortTable(16, this)">Crs_a_90</th>
+        
+          <th onclick="sortTable(17, this)">Crs_pct</th>
+        
+          <th onclick="sortTable(18, this)">Pr_passes_90</th>
+        
+          <th onclick="sortTable(19, this)">Drb_90</th>
+        
+          <th onclick="sortTable(20, this)">Turn_diff</th>
+        
+        <th>Remove</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="frozen-row">
+        
+          <td>28037033</td>
+        
+          <td>Adam Blakeman</td>
+        
+          <td>Chorley</td>
+        
+          <td>ENG</td>
+        
+          <td>5'11"</td>
+        
+          <td>32</td>
+        
+          <td>525</td>
+        
+          <td>D (L)</td>
+        
+          <td>3315.0</td>
+        
+          <td>1.85</td>
+        
+          <td>13.41</td>
+        
+          <td>15.26</td>
+        
+          <td>-1.85</td>
+        
+          <td>68.0</td>
+        
+          <td>76.0</td>
+        
+          <td>0.25</td>
+        
+          <td>12.46</td>
+        
+          <td>566.67</td>
+        
+          <td>4.75</td>
+        
+          <td>1.3</td>
+        
+          <td>-1.85</td>
+        
+        <td></td>
+      </tr>
+      
         <tr>
           
-            <th colspan="14">Details</th>
+            <td>74001044</td>
           
-            <th colspan="11">GK</th>
+            <td>Scott Barrow</td>
           
-            <th colspan="9">DEF</th>
+            <td>Darlington</td>
           
-            <th colspan="22">OFF</th>
+            <td>WAL</td>
           
+            <td>5'10"</td>
+          
+            <td>35</td>
+          
+            <td>775</td>
+          
+            <td>D (RL)</td>
+          
+            <td>1726.0</td>
+          
+            <td>2.35</td>
+          
+            <td>11.0</td>
+          
+            <td>13.97</td>
+          
+            <td>-2.97</td>
+          
+            <td>49.0</td>
+          
+            <td>78.0</td>
+          
+            <td>0.2</td>
+          
+            <td>9.18</td>
+          
+            <td>880.0</td>
+          
+            <td>6.05</td>
+          
+            <td>1.67</td>
+          
+            <td>-2.97</td>
+          
+          <td><button class="remove-btn" onclick="removeRow(this)">Remove</button></td>
         </tr>
+      
         <tr>
           
-            <th>name</th>
+            <td>29123316</td>
           
-            <th>age</th>
+            <td>Alex Fletcher</td>
           
-            <th>wage</th>
-          
-            <th>height</th>
-          
-            <th>season</th>
-          
-            <th>mins</th>
-          
-            <th>dist_90</th>
-          
-            <th>position</th>
-          
-            <th>club</th>
-          
-            <th>nat</th>
-          
-            <th>personality</th>
-          
-            <th>weight</th>
-          
-            <th>transfer_value</th>
-          
-            <th>expires</th>
-          
-            <th>sv_pct</th>
-          
-            <th>svh</th>
-          
-            <th>svp</th>
-          
-            <th>svt</th>
-          
-            <th>goals_against</th>
-          
-            <th>clean_sheets</th>
-          
-            <th>pen_saves</th>
-          
-            <th>pen_missed</th>
-          
-            <th>poss_lost_90</th>
-          
-            <th>pr_passes_90</th>
-          
-            <th>tck_r</th>
-          
-            <th>defensive_score</th>
-          
-            <th>int_90</th>
-          
-            <th>poss_won_90</th>
-          
-            <th>tck_90</th>
-          
-            <th>tck_r</th>
-          
-            <th>hdr_w_90</th>
-          
-            <th>hdr_pct</th>
-          
-            <th>clr_90</th>
-          
-            <th>blk_90</th>
-          
-            <th>turn_diff</th>
-          
-            <th>poss_won_90</th>
-          
-            <th>poss_lost_90</th>
-          
-            <th>pr_passes_90</th>
-          
-            <th>pas_pct</th>
-          
-            <th>pas_a_90</th>
-          
-            <th>xa_90</th>
-          
-            <th>drb_90</th>
-          
-            <th>cr_c_90</th>
-          
-            <th>crs_a_90</th>
-          
-            <th>crs_pct</th>
-          
-            <th>xpg_diff</th>
-          
-            <th>shot_pct</th>
-          
-            <th>shot_pct</th>
-          
-            <th>hdrs_w_90</th>
-          
-            <th>sprint_90</th>
-          
-            <th>off</th>
-          
-            <th>off_90</th>
-          
-            <th>np_xg_90</th>
-          
-            <th>gls_90</th>
-          
-            <th>xgp</th>
-          
-            <th>xgp_90</th>
-          
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          
-            <td>Adam Blakeman</td>
-          
-            <td>32</td>
-          
-            <td>525</td>
-          
-            <td>5'11"</td>
-          
-            <td>1</td>
-          
-            <td>3315.0</td>
-          
-            <td>13.4</td>
-          
-            <td>D/WB (L)</td>
-          
-            <td>Chorley</td>
+            <td>Rushall</td>
           
             <td>ENG</td>
           
-            <td></td>
+            <td>5'9"</td>
           
-            <td>72 kg</td>
+            <td>27</td>
           
-            <td>€1.5K - €3K</td>
+            <td>180</td>
           
-            <td></td>
+            <td>DM, M (C)</td>
           
-            <td>0.0</td>
+            <td>1015.0</td>
           
-            <td>0.0</td>
+            <td>1.33</td>
           
-            <td>0.0</td>
+            <td>7.36</td>
           
-            <td>0.0</td>
+            <td>6.38</td>
           
-            <td></td>
+            <td>0.98</td>
           
-            <td>0.0</td>
+            <td>28.0</td>
           
-            <td></td>
+            <td>72.0</td>
           
-            <td></td>
+            <td>0.2</td>
           
-            <td>15.26</td>
+            <td>0.62</td>
           
-            <td>4.75</td>
+            <td>350.0</td>
           
-            <td>76.0</td>
+            <td>5.32</td>
           
-            <td>2</td>
+            <td>0.44</td>
           
-            <td>1.85</td>
+            <td>0.98</td>
           
-            <td>13.41</td>
-          
-            <td>1.85</td>
-          
-            <td>76.0</td>
-          
-            <td></td>
-          
-            <td>71.0</td>
-          
-            <td>1.6</td>
-          
-            <td>0.9</td>
-          
-            <td>-1.85</td>
-          
-            <td>13.41</td>
-          
-            <td>15.26</td>
-          
-            <td>4.75</td>
-          
-            <td>75.0</td>
-          
-            <td></td>
-          
-            <td>0.25</td>
-          
-            <td>1.3</td>
-          
-            <td>2.2</td>
-          
-            <td>12.46</td>
-          
-            <td>5.67</td>
-          
-            <td>0.01</td>
-          
-            <td>59.0</td>
-          
-            <td>59.0</td>
-          
-            <td>3.83</td>
-          
-            <td></td>
-          
-            <td>2.0</td>
-          
-            <td>0.05429864253393665</td>
-          
-            <td>0.05</td>
-          
-            <td>0.16</td>
-          
-            <td>0.0</td>
-          
-            <td>0.0</td>
-          
+          <td><button class="remove-btn" onclick="removeRow(this)">Remove</button></td>
         </tr>
-        
-          <tr>
-            
-              <td>Adam Livingstone</td>
-            
-              <td>26</td>
-            
-              <td>400</td>
-            
-              <td>5'11"</td>
-            
-              <td>1</td>
-            
-              <td>3178.0</td>
-            
-              <td>13.0</td>
-            
-              <td>D/WB (L)</td>
-            
-              <td>Buxton</td>
-            
-              <td>SCO</td>
-            
-              <td></td>
-            
-              <td>70 kg</td>
-            
-              <td>€0</td>
-            
-              <td></td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td></td>
-            
-              <td>0.0</td>
-            
-              <td></td>
-            
-              <td></td>
-            
-              <td>11.92</td>
-            
-              <td>5.1</td>
-            
-              <td>84.0</td>
-            
-              <td>2</td>
-            
-              <td>2.07</td>
-            
-              <td>14.73</td>
-            
-              <td>2.29</td>
-            
-              <td>84.0</td>
-            
-              <td></td>
-            
-              <td>71.0</td>
-            
-              <td>1.93</td>
-            
-              <td>0.91</td>
-            
-              <td>2.81</td>
-            
-              <td>14.73</td>
-            
-              <td>11.92</td>
-            
-              <td>5.1</td>
-            
-              <td>83.0</td>
-            
-              <td></td>
-            
-              <td>0.15</td>
-            
-              <td>0.85</td>
-            
-              <td>0.93</td>
-            
-              <td>6.97</td>
-            
-              <td>7.45</td>
-            
-              <td>0.01</td>
-            
-              <td>25.0</td>
-            
-              <td>25.0</td>
-            
-              <td>4.56</td>
-            
-              <td></td>
-            
-              <td>4.0</td>
-            
-              <td>0.1132787916928886</td>
-            
-              <td>0.02</td>
-            
-              <td>0.03</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-          </tr>
-        
-          <tr>
-            
-              <td>Scott Barrow</td>
-            
-              <td>35</td>
-            
-              <td>775</td>
-            
-              <td>5'10"</td>
-            
-              <td>1</td>
-            
-              <td>1726.0</td>
-            
-              <td>13.7</td>
-            
-              <td>D/WB (L)</td>
-            
-              <td>Darlington</td>
-            
-              <td>WAL</td>
-            
-              <td></td>
-            
-              <td>71 kg</td>
-            
-              <td>Unknown</td>
-            
-              <td></td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td></td>
-            
-              <td>0.0</td>
-            
-              <td></td>
-            
-              <td></td>
-            
-              <td>13.97</td>
-            
-              <td>6.05</td>
-            
-              <td>78.0</td>
-            
-              <td>2</td>
-            
-              <td>2.35</td>
-            
-              <td>11.0</td>
-            
-              <td>2.56</td>
-            
-              <td>78.0</td>
-            
-              <td></td>
-            
-              <td>47.0</td>
-            
-              <td>0.89</td>
-            
-              <td>0.68</td>
-            
-              <td>-2.97</td>
-            
-              <td>11.0</td>
-            
-              <td>13.97</td>
-            
-              <td>6.05</td>
-            
-              <td>83.0</td>
-            
-              <td></td>
-            
-              <td>0.2</td>
-            
-              <td>1.67</td>
-            
-              <td>1.04</td>
-            
-              <td>9.18</td>
-            
-              <td>8.8</td>
-            
-              <td>-0.02</td>
-            
-              <td>16.0</td>
-            
-              <td>16.0</td>
-            
-              <td>1.93</td>
-            
-              <td></td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td>0.07</td>
-            
-              <td>0.05</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-          </tr>
-        
-          <tr>
-            
-              <td>Tom Platt</td>
-            
-              <td>30</td>
-            
-              <td>400</td>
-            
-              <td>6'1"</td>
-            
-              <td>1</td>
-            
-              <td>3732.0</td>
-            
-              <td>13.1</td>
-            
-              <td>DM, M (C)</td>
-            
-              <td>Darlington</td>
-            
-              <td>ENG</td>
-            
-              <td></td>
-            
-              <td>82 kg</td>
-            
-              <td>Unknown</td>
-            
-              <td></td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td></td>
-            
-              <td>0.0</td>
-            
-              <td></td>
-            
-              <td></td>
-            
-              <td>8.37</td>
-            
-              <td>5.26</td>
-            
-              <td>73.0</td>
-            
-              <td>1</td>
-            
-              <td>0.99</td>
-            
-              <td>9.98</td>
-            
-              <td>2.05</td>
-            
-              <td>73.0</td>
-            
-              <td></td>
-            
-              <td>69.0</td>
-            
-              <td>1.47</td>
-            
-              <td>0.65</td>
-            
-              <td>1.61</td>
-            
-              <td>9.98</td>
-            
-              <td>8.37</td>
-            
-              <td>5.26</td>
-            
-              <td>85.0</td>
-            
-              <td></td>
-            
-              <td>0.08</td>
-            
-              <td>0.41</td>
-            
-              <td>0.05</td>
-            
-              <td>0.34</td>
-            
-              <td>7.0</td>
-            
-              <td>-0.07</td>
-            
-              <td>29.0</td>
-            
-              <td>29.0</td>
-            
-              <td>4.49</td>
-            
-              <td></td>
-            
-              <td>2.0</td>
-            
-              <td>0.04823151125401929</td>
-            
-              <td>0.09</td>
-            
-              <td>0.02</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-          </tr>
-        
-          <tr>
-            
-              <td>Cuba Meyer</td>
-            
-              <td>20</td>
-            
-              <td>120</td>
-            
-              <td>5'9"</td>
-            
-              <td>1</td>
-            
-              <td>4350.0</td>
-            
-              <td>13.0</td>
-            
-              <td>WB (L)</td>
-            
-              <td>Peterborough Sports</td>
-            
-              <td>NED</td>
-            
-              <td></td>
-            
-              <td>71 kg</td>
-            
-              <td>Unknown</td>
-            
-              <td></td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td></td>
-            
-              <td>0.0</td>
-            
-              <td></td>
-            
-              <td></td>
-            
-              <td>13.18</td>
-            
-              <td>3.04</td>
-            
-              <td>88.0</td>
-            
-              <td>2</td>
-            
-              <td>2.32</td>
-            
-              <td>11.44</td>
-            
-              <td>2.86</td>
-            
-              <td>88.0</td>
-            
-              <td></td>
-            
-              <td>63.0</td>
-            
-              <td>2.05</td>
-            
-              <td>0.89</td>
-            
-              <td>-1.74</td>
-            
-              <td>11.44</td>
-            
-              <td>13.18</td>
-            
-              <td>3.04</td>
-            
-              <td>83.0</td>
-            
-              <td></td>
-            
-              <td>0.16</td>
-            
-              <td>1.22</td>
-            
-              <td>1.08</td>
-            
-              <td>8.26</td>
-            
-              <td>7.67</td>
-            
-              <td>-0.01</td>
-            
-              <td>47.0</td>
-            
-              <td>47.0</td>
-            
-              <td>4.06</td>
-            
-              <td></td>
-            
-              <td>4.0</td>
-            
-              <td>0.08275862068965517</td>
-            
-              <td>0.07</td>
-            
-              <td>0.06</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-          </tr>
-        
-          <tr>
-            
-              <td>Joe Hanks</td>
-            
-              <td>29</td>
-            
-              <td>300</td>
-            
-              <td>6'2"</td>
-            
-              <td>1</td>
-            
-              <td>2022.0</td>
-            
-              <td>12.9</td>
-            
-              <td>M (C)</td>
-            
-              <td>Gloucester</td>
-            
-              <td>ENG</td>
-            
-              <td></td>
-            
-              <td>72 kg</td>
-            
-              <td>Unknown</td>
-            
-              <td></td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td></td>
-            
-              <td>0.0</td>
-            
-              <td></td>
-            
-              <td></td>
-            
-              <td>8.86</td>
-            
-              <td>2.72</td>
-            
-              <td>73.0</td>
-            
-              <td>1</td>
-            
-              <td>1.29</td>
-            
-              <td>7.97</td>
-            
-              <td>1.6</td>
-            
-              <td>73.0</td>
-            
-              <td></td>
-            
-              <td>50.0</td>
-            
-              <td>1.47</td>
-            
-              <td>0.49</td>
-            
-              <td>-0.89</td>
-            
-              <td>7.97</td>
-            
-              <td>8.86</td>
-            
-              <td>2.72</td>
-            
-              <td>86.0</td>
-            
-              <td></td>
-            
-              <td>0.1</td>
-            
-              <td>0.58</td>
-            
-              <td>0.71</td>
-            
-              <td>3.47</td>
-            
-              <td>4.88</td>
-            
-              <td>0.14</td>
-            
-              <td>33.0</td>
-            
-              <td>33.0</td>
-            
-              <td>2.45</td>
-            
-              <td></td>
-            
-              <td>2.0</td>
-            
-              <td>0.08902077151335311</td>
-            
-              <td>0.06</td>
-            
-              <td>0.27</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-          </tr>
-        
-          <tr>
-            
-              <td>Tylah Wallace-Ming</td>
-            
-              <td>19</td>
-            
-              <td>110</td>
-            
-              <td>5'10"</td>
-            
-              <td>1</td>
-            
-              <td>1956.0</td>
-            
-              <td>11.6</td>
-            
-              <td>D (R)</td>
-            
-              <td>Aberystwyth</td>
-            
-              <td>ENG</td>
-            
-              <td></td>
-            
-              <td>70 kg</td>
-            
-              <td>Unknown</td>
-            
-              <td></td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td></td>
-            
-              <td>0.0</td>
-            
-              <td></td>
-            
-              <td></td>
-            
-              <td>15.0</td>
-            
-              <td>4.37</td>
-            
-              <td>79.0</td>
-            
-              <td>2</td>
-            
-              <td>2.25</td>
-            
-              <td>11.6</td>
-            
-              <td>1.75</td>
-            
-              <td>79.0</td>
-            
-              <td></td>
-            
-              <td>48.0</td>
-            
-              <td>1.47</td>
-            
-              <td>0.64</td>
-            
-              <td>-3.4</td>
-            
-              <td>11.6</td>
-            
-              <td>15.0</td>
-            
-              <td>4.37</td>
-            
-              <td>82.0</td>
-            
-              <td></td>
-            
-              <td>0.06</td>
-            
-              <td>1.43</td>
-            
-              <td>0.83</td>
-            
-              <td>7.78</td>
-            
-              <td>9.39</td>
-            
-              <td>-0.2</td>
-            
-              <td>11.0</td>
-            
-              <td>11.0</td>
-            
-              <td>2.94</td>
-            
-              <td></td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td>0.2</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-          </tr>
-        
-          <tr>
-            
-              <td>Harry Perritt</td>
-            
-              <td>23</td>
-            
-              <td>300</td>
-            
-              <td>6'1"</td>
-            
-              <td>1</td>
-            
-              <td>3766.0</td>
-            
-              <td>12.0</td>
-            
-              <td>D (R)</td>
-            
-              <td>Alfreton</td>
-            
-              <td>ENG</td>
-            
-              <td></td>
-            
-              <td>66 kg</td>
-            
-              <td>Unknown</td>
-            
-              <td></td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td></td>
-            
-              <td>0.0</td>
-            
-              <td></td>
-            
-              <td></td>
-            
-              <td>11.16</td>
-            
-              <td>4.37</td>
-            
-              <td>81.0</td>
-            
-              <td>2</td>
-            
-              <td>2.17</td>
-            
-              <td>13.07</td>
-            
-              <td>2.7</td>
-            
-              <td>81.0</td>
-            
-              <td></td>
-            
-              <td>47.0</td>
-            
-              <td>2.27</td>
-            
-              <td>1.1</td>
-            
-              <td>1.91</td>
-            
-              <td>13.07</td>
-            
-              <td>11.16</td>
-            
-              <td>4.37</td>
-            
-              <td>81.0</td>
-            
-              <td></td>
-            
-              <td>0.05</td>
-            
-              <td>0.55</td>
-            
-              <td>0.33</td>
-            
-              <td>3.04</td>
-            
-              <td>9.07</td>
-            
-              <td>-0.01</td>
-            
-              <td>20.0</td>
-            
-              <td>20.0</td>
-            
-              <td>3.56</td>
-            
-              <td></td>
-            
-              <td>2.0</td>
-            
-              <td>0.04779607010090281</td>
-            
-              <td>0.01</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-          </tr>
-        
-          <tr>
-            
-              <td>Blair Adams</td>
-            
-              <td>32</td>
-            
-              <td>575</td>
-            
-              <td>5'11"</td>
-            
-              <td>1</td>
-            
-              <td>3757.0</td>
-            
-              <td>13.0</td>
-            
-              <td>D/WB (L)</td>
-            
-              <td>South Shields</td>
-            
-              <td>ENG</td>
-            
-              <td></td>
-            
-              <td>72 kg</td>
-            
-              <td>Unknown</td>
-            
-              <td></td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td></td>
-            
-              <td>0.0</td>
-            
-              <td></td>
-            
-              <td></td>
-            
-              <td>10.06</td>
-            
-              <td>6.61</td>
-            
-              <td>84.0</td>
-            
-              <td>2</td>
-            
-              <td>2.25</td>
-            
-              <td>12.38</td>
-            
-              <td>2.2</td>
-            
-              <td>84.0</td>
-            
-              <td></td>
-            
-              <td>62.0</td>
-            
-              <td>1.29</td>
-            
-              <td>0.69</td>
-            
-              <td>2.32</td>
-            
-              <td>12.38</td>
-            
-              <td>10.06</td>
-            
-              <td>6.61</td>
-            
-              <td>88.0</td>
-            
-              <td></td>
-            
-              <td>0.18</td>
-            
-              <td>1.03</td>
-            
-              <td>0.81</td>
-            
-              <td>4.29</td>
-            
-              <td>5.26</td>
-            
-              <td>-0.02</td>
-            
-              <td>41.0</td>
-            
-              <td>41.0</td>
-            
-              <td>3.14</td>
-            
-              <td></td>
-            
-              <td>3.0</td>
-            
-              <td>0.07186585041256321</td>
-            
-              <td>0.04</td>
-            
-              <td>0.02</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-          </tr>
-        
-          <tr>
-            
-              <td>Tom Allan</td>
-            
-              <td>29</td>
-            
-              <td>350</td>
-            
-              <td>6'4"</td>
-            
-              <td>1</td>
-            
-              <td>3819.0</td>
-            
-              <td>11.4</td>
-            
-              <td>D (C)</td>
-            
-              <td>Farsley</td>
-            
-              <td>ENG</td>
-            
-              <td></td>
-            
-              <td>84 kg</td>
-            
-              <td>Unknown</td>
-            
-              <td></td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td></td>
-            
-              <td>0.0</td>
-            
-              <td></td>
-            
-              <td></td>
-            
-              <td>11.69</td>
-            
-              <td>5.18</td>
-            
-              <td>76.0</td>
-            
-              <td>1</td>
-            
-              <td>1.08</td>
-            
-              <td>12.84</td>
-            
-              <td>1.3</td>
-            
-              <td>76.0</td>
-            
-              <td></td>
-            
-              <td>78.0</td>
-            
-              <td>2.0</td>
-            
-              <td>0.68</td>
-            
-              <td>1.15</td>
-            
-              <td>12.84</td>
-            
-              <td>11.69</td>
-            
-              <td>5.18</td>
-            
-              <td>80.0</td>
-            
-              <td></td>
-            
-              <td>0.06</td>
-            
-              <td>0.24</td>
-            
-              <td>0.19</td>
-            
-              <td>1.6</td>
-            
-              <td>8.5</td>
-            
-              <td>0.04</td>
-            
-              <td>46.0</td>
-            
-              <td>46.0</td>
-            
-              <td>7.14</td>
-            
-              <td></td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td>0.03</td>
-            
-              <td>0.07</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-          </tr>
-        
-          <tr>
-            
-              <td>Sam Fielding</td>
-            
-              <td>25</td>
-            
-              <td>350</td>
-            
-              <td>6'2"</td>
-            
-              <td>1</td>
-            
-              <td>1359.0</td>
-            
-              <td>13.7</td>
-            
-              <td>D (C), DM, M (C)</td>
-            
-              <td>Spennymoor</td>
-            
-              <td>ENG</td>
-            
-              <td></td>
-            
-              <td>75 kg</td>
-            
-              <td>Unknown</td>
-            
-              <td></td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td></td>
-            
-              <td>0.0</td>
-            
-              <td></td>
-            
-              <td></td>
-            
-              <td>6.82</td>
-            
-              <td>3.84</td>
-            
-              <td>70.0</td>
-            
-              <td>1</td>
-            
-              <td>1.46</td>
-            
-              <td>8.34</td>
-            
-              <td>1.26</td>
-            
-              <td>70.0</td>
-            
-              <td></td>
-            
-              <td>45.0</td>
-            
-              <td>0.99</td>
-            
-              <td>0.66</td>
-            
-              <td>1.52</td>
-            
-              <td>8.34</td>
-            
-              <td>6.82</td>
-            
-              <td>3.84</td>
-            
-              <td>91.0</td>
-            
-              <td></td>
-            
-              <td>0.15</td>
-            
-              <td>0.79</td>
-            
-              <td>0.73</td>
-            
-              <td>5.1</td>
-            
-              <td>7.0</td>
-            
-              <td>-0.02</td>
-            
-              <td>33.0</td>
-            
-              <td>33.0</td>
-            
-              <td>2.12</td>
-            
-              <td></td>
-            
-              <td>2.0</td>
-            
-              <td>0.13245033112582782</td>
-            
-              <td>0.09</td>
-            
-              <td>0.07</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-          </tr>
-        
-          <tr>
-            
-              <td>Lewis Miccio</td>
-            
-              <td>25</td>
-            
-              <td>230</td>
-            
-              <td>5'9"</td>
-            
-              <td>1</td>
-            
-              <td>2317.0</td>
-            
-              <td>10.7</td>
-            
-              <td>D (LC)</td>
-            
-              <td>Oxford City</td>
-            
-              <td>NZL</td>
-            
-              <td></td>
-            
-              <td>77 kg</td>
-            
-              <td>€0</td>
-            
-              <td></td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td></td>
-            
-              <td>0.0</td>
-            
-              <td></td>
-            
-              <td></td>
-            
-              <td>6.53</td>
-            
-              <td>3.19</td>
-            
-              <td>88.0</td>
-            
-              <td>1</td>
-            
-              <td>1.71</td>
-            
-              <td>11.89</td>
-            
-              <td>1.17</td>
-            
-              <td>88.0</td>
-            
-              <td></td>
-            
-              <td>66.0</td>
-            
-              <td>1.48</td>
-            
-              <td>0.31</td>
-            
-              <td>5.36</td>
-            
-              <td>11.89</td>
-            
-              <td>6.53</td>
-            
-              <td>3.19</td>
-            
-              <td>86.0</td>
-            
-              <td></td>
-            
-              <td>0.05</td>
-            
-              <td>0.19</td>
-            
-              <td>0.04</td>
-            
-              <td>0.31</td>
-            
-              <td>8.0</td>
-            
-              <td>-0.02</td>
-            
-              <td>6.0</td>
-            
-              <td>6.0</td>
-            
-              <td>5.09</td>
-            
-              <td></td>
-            
-              <td>1.0</td>
-            
-              <td>0.03884333189469141</td>
-            
-              <td>0.06</td>
-            
-              <td>0.04</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-          </tr>
-        
-          <tr>
-            
-              <td>Jordan Cullinane-Liburd</td>
-            
-              <td>28</td>
-            
-              <td>230</td>
-            
-              <td>6'3"</td>
-            
-              <td>1</td>
-            
-              <td>1832.0</td>
-            
-              <td>12.5</td>
-            
-              <td>D (C)</td>
-            
-              <td>Tamworth</td>
-            
-              <td>ENG</td>
-            
-              <td></td>
-            
-              <td>98 kg</td>
-            
-              <td>Unknown</td>
-            
-              <td></td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td></td>
-            
-              <td>0.0</td>
-            
-              <td></td>
-            
-              <td></td>
-            
-              <td>16.65</td>
-            
-              <td>6.24</td>
-            
-              <td>86.0</td>
-            
-              <td>2</td>
-            
-              <td>2.41</td>
-            
-              <td>16.8</td>
-            
-              <td>2.8</td>
-            
-              <td>86.0</td>
-            
-              <td></td>
-            
-              <td>79.0</td>
-            
-              <td>2.8</td>
-            
-              <td>0.44</td>
-            
-              <td>0.15</td>
-            
-              <td>16.8</td>
-            
-              <td>16.65</td>
-            
-              <td>6.24</td>
-            
-              <td>82.0</td>
-            
-              <td></td>
-            
-              <td>0.06</td>
-            
-              <td>0.39</td>
-            
-              <td>0.25</td>
-            
-              <td>2.26</td>
-            
-              <td>9.2</td>
-            
-              <td>0.01</td>
-            
-              <td>40.0</td>
-            
-              <td>40.0</td>
-            
-              <td>6.24</td>
-            
-              <td></td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td>0.04</td>
-            
-              <td>0.05</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-          </tr>
-        
-          <tr>
-            
-              <td>Jordaan Brown</td>
-            
-              <td>32</td>
-            
-              <td>120</td>
-            
-              <td>6'2"</td>
-            
-              <td>1</td>
-            
-              <td>3083.0</td>
-            
-              <td>11.2</td>
-            
-              <td>D (C)</td>
-            
-              <td>Rushall</td>
-            
-              <td>ENG</td>
-            
-              <td></td>
-            
-              <td>85 kg</td>
-            
-              <td>Unknown</td>
-            
-              <td></td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td></td>
-            
-              <td>0.0</td>
-            
-              <td></td>
-            
-              <td></td>
-            
-              <td>8.96</td>
-            
-              <td>4.41</td>
-            
-              <td>74.0</td>
-            
-              <td>1</td>
-            
-              <td>1.61</td>
-            
-              <td>13.84</td>
-            
-              <td>1.23</td>
-            
-              <td>74.0</td>
-            
-              <td></td>
-            
-              <td>73.0</td>
-            
-              <td>2.19</td>
-            
-              <td>0.35</td>
-            
-              <td>4.88</td>
-            
-              <td>13.84</td>
-            
-              <td>8.96</td>
-            
-              <td>4.41</td>
-            
-              <td>86.0</td>
-            
-              <td></td>
-            
-              <td>0.04</td>
-            
-              <td>0.12</td>
-            
-              <td>0.09</td>
-            
-              <td>0.96</td>
-            
-              <td>11.0</td>
-            
-              <td>0.03</td>
-            
-              <td>29.0</td>
-            
-              <td>29.0</td>
-            
-              <td>5.34</td>
-            
-              <td></td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td>0.03</td>
-            
-              <td>0.09</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-          </tr>
-        
-          <tr>
-            
-              <td>Keenan Quansah</td>
-            
-              <td>26</td>
-            
-              <td>350</td>
-            
-              <td>6'4"</td>
-            
-              <td>1</td>
-            
-              <td>2610.0</td>
-            
-              <td>12.0</td>
-            
-              <td>D (RC)</td>
-            
-              <td>Southport</td>
-            
-              <td>ENG</td>
-            
-              <td></td>
-            
-              <td>80 kg</td>
-            
-              <td>Unknown</td>
-            
-              <td></td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td></td>
-            
-              <td>0.0</td>
-            
-              <td></td>
-            
-              <td></td>
-            
-              <td>11.72</td>
-            
-              <td>4.0</td>
-            
-              <td>77.0</td>
-            
-              <td>1</td>
-            
-              <td>1.66</td>
-            
-              <td>16.0</td>
-            
-              <td>1.93</td>
-            
-              <td>77.0</td>
-            
-              <td></td>
-            
-              <td>80.0</td>
-            
-              <td>1.62</td>
-            
-              <td>0.31</td>
-            
-              <td>4.28</td>
-            
-              <td>16.0</td>
-            
-              <td>11.72</td>
-            
-              <td>4.0</td>
-            
-              <td>81.0</td>
-            
-              <td></td>
-            
-              <td>0.08</td>
-            
-              <td>0.69</td>
-            
-              <td>0.21</td>
-            
-              <td>1.66</td>
-            
-              <td>8.0</td>
-            
-              <td>0.03</td>
-            
-              <td>47.0</td>
-            
-              <td>47.0</td>
-            
-              <td>7.9</td>
-            
-              <td></td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td>0.04</td>
-            
-              <td>0.07</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-          </tr>
-        
-          <tr>
-            
-              <td>Isaac Assenso</td>
-            
-              <td>26</td>
-            
-              <td>230</td>
-            
-              <td>6'3"</td>
-            
-              <td>1</td>
-            
-              <td>1703.0</td>
-            
-              <td>11.9</td>
-            
-              <td>D (C)</td>
-            
-              <td>Farsley</td>
-            
-              <td>ENG</td>
-            
-              <td></td>
-            
-              <td>70 kg</td>
-            
-              <td>Unknown</td>
-            
-              <td></td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td></td>
-            
-              <td>0.0</td>
-            
-              <td></td>
-            
-              <td></td>
-            
-              <td>10.68</td>
-            
-              <td>4.86</td>
-            
-              <td>79.0</td>
-            
-              <td>2</td>
-            
-              <td>1.96</td>
-            
-              <td>12.84</td>
-            
-              <td>1.59</td>
-            
-              <td>79.0</td>
-            
-              <td></td>
-            
-              <td>76.0</td>
-            
-              <td>1.85</td>
-            
-              <td>0.69</td>
-            
-              <td>2.16</td>
-            
-              <td>12.84</td>
-            
-              <td>10.68</td>
-            
-              <td>4.86</td>
-            
-              <td>82.0</td>
-            
-              <td></td>
-            
-              <td>0.03</td>
-            
-              <td>0.53</td>
-            
-              <td>0.16</td>
-            
-              <td>2.54</td>
-            
-              <td>16.0</td>
-            
-              <td>0.02</td>
-            
-              <td>39.0</td>
-            
-              <td>39.0</td>
-            
-              <td>7.87</td>
-            
-              <td></td>
-            
-              <td>1.0</td>
-            
-              <td>0.052847915443335294</td>
-            
-              <td>0.09</td>
-            
-              <td>0.11</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-          </tr>
-        
-          <tr>
-            
-              <td>Alex Moore</td>
-            
-              <td>27</td>
-            
-              <td>120</td>
-            
-              <td>6'1"</td>
-            
-              <td>1</td>
-            
-              <td>3345.0</td>
-            
-              <td>13.1</td>
-            
-              <td>DM, M (C)</td>
-            
-              <td>Rushall</td>
-            
-              <td>ENG</td>
-            
-              <td></td>
-            
-              <td>81 kg</td>
-            
-              <td>Unknown</td>
-            
-              <td></td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td></td>
-            
-              <td>0.0</td>
-            
-              <td></td>
-            
-              <td></td>
-            
-              <td>7.43</td>
-            
-              <td>2.58</td>
-            
-              <td>68.0</td>
-            
-              <td>1</td>
-            
-              <td>1.29</td>
-            
-              <td>8.66</td>
-            
-              <td>1.35</td>
-            
-              <td>68.0</td>
-            
-              <td></td>
-            
-              <td>57.0</td>
-            
-              <td>1.75</td>
-            
-              <td>0.38</td>
-            
-              <td>1.23</td>
-            
-              <td>8.66</td>
-            
-              <td>7.43</td>
-            
-              <td>2.58</td>
-            
-              <td>90.0</td>
-            
-              <td></td>
-            
-              <td>0.15</td>
-            
-              <td>0.54</td>
-            
-              <td>0.62</td>
-            
-              <td>3.17</td>
-            
-              <td>5.13</td>
-            
-              <td>-0.07</td>
-            
-              <td>24.0</td>
-            
-              <td>24.0</td>
-            
-              <td>2.72</td>
-            
-              <td></td>
-            
-              <td>3.0</td>
-            
-              <td>0.08071748878923767</td>
-            
-              <td>0.12</td>
-            
-              <td>0.05</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-          </tr>
-        
-          <tr>
-            
-              <td>Jack Davies</td>
-            
-              <td>21</td>
-            
-              <td>180</td>
-            
-              <td>6'2"</td>
-            
-              <td>1</td>
-            
-              <td>1469.0</td>
-            
-              <td>11.9</td>
-            
-              <td>D (LC)</td>
-            
-              <td>Banbury</td>
-            
-              <td>ENG</td>
-            
-              <td></td>
-            
-              <td>81 kg</td>
-            
-              <td>Unknown</td>
-            
-              <td></td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td></td>
-            
-              <td>0.0</td>
-            
-              <td></td>
-            
-              <td></td>
-            
-              <td>12.8</td>
-            
-              <td>3.06</td>
-            
-              <td>86.0</td>
-            
-              <td>2</td>
-            
-              <td>1.65</td>
-            
-              <td>15.13</td>
-            
-              <td>1.9</td>
-            
-              <td>86.0</td>
-            
-              <td></td>
-            
-              <td>76.0</td>
-            
-              <td>1.96</td>
-            
-              <td>0.61</td>
-            
-              <td>2.33</td>
-            
-              <td>15.13</td>
-            
-              <td>12.8</td>
-            
-              <td>3.06</td>
-            
-              <td>77.0</td>
-            
-              <td></td>
-            
-              <td>0.03</td>
-            
-              <td>1.04</td>
-            
-              <td>0.18</td>
-            
-              <td>3.25</td>
-            
-              <td>17.67</td>
-            
-              <td>-0.05</td>
-            
-              <td>38.0</td>
-            
-              <td>38.0</td>
-            
-              <td>8.15</td>
-            
-              <td></td>
-            
-              <td>2.0</td>
-            
-              <td>0.12253233492171545</td>
-            
-              <td>0.05</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-          </tr>
-        
-          <tr>
-            
-              <td>Mustafa Hussein</td>
-            
-              <td>23</td>
-            
-              <td>0</td>
-            
-              <td>5'10"</td>
-            
-              <td>1</td>
-            
-              <td>2599.0</td>
-            
-              <td>12.1</td>
-            
-              <td>AM (R)</td>
-            
-              <td>Caernarfon</td>
-            
-              <td>ENG</td>
-            
-              <td></td>
-            
-              <td>73 kg</td>
-            
-              <td>Unknown</td>
-            
-              <td></td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td></td>
-            
-              <td>0.0</td>
-            
-              <td></td>
-            
-              <td></td>
-            
-              <td>18.21</td>
-            
-              <td>2.08</td>
-            
-              <td>77.0</td>
-            
-              <td>1</td>
-            
-              <td>1.42</td>
-            
-              <td>3.12</td>
-            
-              <td>1.7</td>
-            
-              <td>77.0</td>
-            
-              <td></td>
-            
-              <td>15.0</td>
-            
-              <td>1.14</td>
-            
-              <td>0.62</td>
-            
-              <td>-15.09</td>
-            
-              <td>3.12</td>
-            
-              <td>18.21</td>
-            
-              <td>2.08</td>
-            
-              <td>84.0</td>
-            
-              <td></td>
-            
-              <td>0.15</td>
-            
-              <td>2.67</td>
-            
-              <td>0.83</td>
-            
-              <td>5.82</td>
-            
-              <td>7.0</td>
-            
-              <td>-0.02</td>
-            
-              <td>47.0</td>
-            
-              <td>47.0</td>
-            
-              <td>0.97</td>
-            
-              <td></td>
-            
-              <td>5.0</td>
-            
-              <td>0.17314351673720663</td>
-            
-              <td>0.19</td>
-            
-              <td>0.17</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-          </tr>
-        
-          <tr>
-            
-              <td>Oliver Southern</td>
-            
-              <td>22</td>
-            
-              <td>400</td>
-            
-              <td>6'0"</td>
-            
-              <td>1</td>
-            
-              <td>2765.0</td>
-            
-              <td>12.5</td>
-            
-              <td>D/WB (R)</td>
-            
-              <td>Hereford</td>
-            
-              <td>ENG</td>
-            
-              <td></td>
-            
-              <td>80 kg</td>
-            
-              <td>Unknown</td>
-            
-              <td></td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td></td>
-            
-              <td>0.0</td>
-            
-              <td></td>
-            
-              <td></td>
-            
-              <td>13.74</td>
-            
-              <td>4.92</td>
-            
-              <td>85.0</td>
-            
-              <td>2</td>
-            
-              <td>2.28</td>
-            
-              <td>15.92</td>
-            
-              <td>2.15</td>
-            
-              <td>85.0</td>
-            
-              <td></td>
-            
-              <td>77.0</td>
-            
-              <td>1.95</td>
-            
-              <td>0.59</td>
-            
-              <td>2.18</td>
-            
-              <td>15.92</td>
-            
-              <td>13.74</td>
-            
-              <td>4.92</td>
-            
-              <td>82.0</td>
-            
-              <td></td>
-            
-              <td>0.11</td>
-            
-              <td>1.14</td>
-            
-              <td>0.59</td>
-            
-              <td>3.35</td>
-            
-              <td>5.72</td>
-            
-              <td>-0.08</td>
-            
-              <td>18.0</td>
-            
-              <td>18.0</td>
-            
-              <td>7.91</td>
-            
-              <td></td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td>0.08</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-          </tr>
-        
-          <tr>
-            
-              <td>Jack Tolley</td>
-            
-              <td>20</td>
-            
-              <td>300</td>
-            
-              <td>5'9"</td>
-            
-              <td>1</td>
-            
-              <td>2866.0</td>
-            
-              <td>12.4</td>
-            
-              <td>AM (R)</td>
-            
-              <td>Gloucester</td>
-            
-              <td>ENG</td>
-            
-              <td></td>
-            
-              <td>69 kg</td>
-            
-              <td>Unknown</td>
-            
-              <td></td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-              <td></td>
-            
-              <td>0.0</td>
-            
-              <td></td>
-            
-              <td></td>
-            
-              <td>14.13</td>
-            
-              <td>2.14</td>
-            
-              <td>81.0</td>
-            
-              <td>1</td>
-            
-              <td>1.7</td>
-            
-              <td>6.59</td>
-            
-              <td>1.6</td>
-            
-              <td>81.0</td>
-            
-              <td></td>
-            
-              <td>29.0</td>
-            
-              <td>1.26</td>
-            
-              <td>0.82</td>
-            
-              <td>-7.54</td>
-            
-              <td>6.59</td>
-            
-              <td>14.13</td>
-            
-              <td>2.14</td>
-            
-              <td>84.0</td>
-            
-              <td></td>
-            
-              <td>0.15</td>
-            
-              <td>3.58</td>
-            
-              <td>0.97</td>
-            
-              <td>6.63</td>
-            
-              <td>6.81</td>
-            
-              <td>-0.04</td>
-            
-              <td>24.0</td>
-            
-              <td>24.0</td>
-            
-              <td>1.92</td>
-            
-              <td></td>
-            
-              <td>5.0</td>
-            
-              <td>0.157013258897418</td>
-            
-              <td>0.07</td>
-            
-              <td>0.03</td>
-            
-              <td>0.0</td>
-            
-              <td>0.0</td>
-            
-          </tr>
-        
-      </tbody>
-    </table>
-    
+      
+    </tbody>
+  </table>
+
+  <script>
+  // Track sort directions for each column
+  var sortDirections = {};
+
+  function sortTable(col, thElem) {
+    var table = document.getElementById("comparisonTable");
+    var tbody = table.tBodies[0];
+    var rows = Array.from(tbody.rows).slice(1); // Exclude the first (frozen) row
+
+    // Toggle sort direction: default to ascending
+    sortDirections[col] = !sortDirections[col];
+    var ascending = sortDirections[col];
+
+    // Remove sorted classes from all headers
+    var ths = table.querySelectorAll("th");
+    ths.forEach(function(th) {
+      th.classList.remove("sorted-asc", "sorted-desc");
+    });
+    // Add sorted class to current header
+    thElem.classList.add(ascending ? "sorted-asc" : "sorted-desc");
+
+    var sorted = rows.sort(function(a, b) {
+      var x = a.cells[col].innerText;
+      var y = b.cells[col].innerText;
+      if (!isNaN(x) && !isNaN(y)) {
+        x = Number(x);
+        y = Number(y);
+      }
+      if (ascending) {
+        return x > y ? 1 : x < y ? -1 : 0;
+      } else {
+        return x < y ? 1 : x > y ? -1 : 0;
+      }
+    });
+    // Re-append the sorted rows after the frozen row
+    for (var i = 0; i < sorted.length; i++) {
+      tbody.appendChild(sorted[i]);
+    }
+  }
+
+  function removeRow(btn) {
+    var row = btn.closest('tr');
+    row.parentNode.removeChild(row);
+  }
+  </script>
+</body>
+</html>
